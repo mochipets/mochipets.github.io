@@ -1,0 +1,192 @@
+<!doctype html>
+<!-- 上線前：確認頁尾的開發者名稱。 -->
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麻糬寵物 客服</title>
+<meta name="description" content="麻糬寵物（Mochi Pets）的常見問題與聯絡方式。">
+<style>
+  :root {
+    --bg: #FBF5EC;
+    --card: #FFFFFF;
+    --ink: #4A3A40;
+    --ink-2: #7D6B72;
+    --accent: #D9677F;
+    --accent-ink: #FFFFFF;
+    --line: #EFE3D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2A2230;
+      --card: #352B3C;
+      --ink: #F3E9EE;
+      --ink-2: #C3B2BC;
+      --accent: #F29BB0;
+      --accent-ink: #2A2230;
+      --line: #463A4E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Hiragino Maru Gothic ProN", "PingFang TC", -apple-system, "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { margin-bottom: 24px; }
+  .app { color: var(--ink-2); font-size: 15px; margin: 0 0 4px; }
+  h1 { font-size: 28px; margin: 0 0 6px; line-height: 1.35; }
+  .lead { color: var(--ink-2); margin: 0; }
+  h2 { font-size: 19px; margin: 32px 0 10px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  .contact {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  details {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 0 18px;
+    margin: 0 0 10px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 0;
+    font-weight: 700;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "＋"; float: right; color: var(--ink-2); font-weight: 400; }
+  details[open] summary::after { content: "－"; }
+  details > div { padding: 0 0 14px; color: var(--ink-2); }
+  details > div p:last-child, details > div ul:last-child, details > div ol:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="app">麻糬寵物 Mochi Pets</p>
+    <h1>客服與常見問題</h1>
+    <p class="lead">有問題、建議，或發現 bug，都歡迎告訴我們。</p>
+  </header>
+
+  <div class="contact">
+    <p>寄信給我們，通常會在 3 個工作天內回覆。</p>
+    <p>回報問題時，附上 iPhone 型號、iOS 版本、App 版本（App 內「設定 › 關於」）和發生的步驟，會更快幫你解決。</p>
+    <a class="button" href="mailto:mochipets.care@gmail.com?subject=%E9%BA%BB%E7%B3%AC%E5%AF%B5%E7%89%A9%E5%AE%A2%E6%9C%8D">寄信給客服</a>
+  </div>
+
+  <h2>專注</h2>
+  <details>
+    <summary>嚴格模式是什麼？什麼情況會失敗？</summary>
+    <div>
+      <p>專注中離開 App 太久，這次專注就算失敗、沒有獎勵。容許的時間預設 25 秒，可以在「專注 › 設定 › 番茄流程與規則」調整。</p>
+      <ul>
+        <li>鎖定螢幕、講電話不算離開。</li>
+        <li>每週有 2 次「免死金牌」，離開太久時會自動用掉一次，這次專注照常繼續（也可以關掉自動使用）。</li>
+        <li>不想要這個規則，可以在專注頁的「設定」關閉嚴格模式。</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>想查字典、用計算機，但不想被算離開</summary>
+    <div>
+      <p>可以改用「專注時封鎖 App」：只封鎖你選的分心 App，其他 App 可以自由使用，而且不會算嚴格模式失敗。設定位置在專注頁的「設定 › 封鎖分心的 App」，需要用 Face ID 或密碼同意「螢幕使用時間」權限。</p>
+    </div>
+  </details>
+  <details>
+    <summary>沒有收到專注完成的通知</summary>
+    <div>
+      <p>到 iPhone「設定 › 通知 › 麻糬寵物」確認通知已開啟，也確認專注模式或勿擾模式沒有擋住通知。App 內「設定 › 通知」可以分別開關每一種提醒。</p>
+    </div>
+  </details>
+
+  <h2>步數與抽寵物</h2>
+  <details>
+    <summary>步數沒有更新，換不到抽寵物券</summary>
+    <div>
+      <ol>
+        <li>打開「健康」App › 右上角頭像 › 「App」 › 麻糬寵物，確認「步數」已允許讀取。</li>
+        <li>回到麻糬寵物，打開「抽寵物」頁，步數會自動更新。</li>
+      </ol>
+      <p>每走 2,000 步換 1 張券，每天最多 5 張；手動輸入的步數不會計入。</p>
+    </div>
+  </details>
+
+  <h2>麻糬寵物 Plus 與付款</h2>
+  <details>
+    <summary>買了 Plus，換手機或重新安裝後不見了</summary>
+    <div>
+      <p>到 App 內「設定 › 麻糬寵物 Plus」，按「恢復購買」。請確認登入的是當初購買的 Apple 帳號。</p>
+    </div>
+  </details>
+  <details>
+    <summary>免費試用會自動扣款嗎？怎麼取消？</summary>
+    <div>
+      <p>月費和年費有 7 天免費試用，試用結束前一天 App 會發通知提醒你。不想續訂的話，到 iPhone「設定 › Apple 帳號 › 訂閱」取消，試用期間取消不會被收費。</p>
+    </div>
+  </details>
+  <details>
+    <summary>怎麼取消訂閱或申請退款？</summary>
+    <div>
+      <p>取消：iPhone「設定 › Apple 帳號 › 訂閱」，或在 App 內 Plus 頁按「管理訂閱」。取消後到期前仍可以使用 Plus。</p>
+      <p>退款由 Apple 處理，請到 <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> 申請。</p>
+    </div>
+  </details>
+  <details>
+    <summary>不買 Plus 可以玩嗎？</summary>
+    <div>
+      <p>可以。專注、照顧寵物、抽寵物、季節活動、考試計畫、冒險故事都是免費的。Plus 是額外的外觀與進階統計，不會讓寵物變強，也不會提高抽寵物的機率。</p>
+    </div>
+  </details>
+
+  <h2>資料與換手機</h2>
+  <details>
+    <summary>換手機時怎麼把寵物帶過去？</summary>
+    <div>
+      <ol>
+        <li>在舊手機打開「設定 › 資料備份 › 匯出備份檔」，存到「檔案」或 iCloud 雲碟。</li>
+        <li>在新手機安裝麻糬寵物，到「設定 › 資料備份 › 從備份檔還原」選擇這個檔案。</li>
+      </ol>
+      <p>如果你的版本有「iCloud 同步」並且開啟，用同一個 Apple 帳號登入新手機，資料會自動回來。</p>
+    </div>
+  </details>
+  <details>
+    <summary>我的資料會被上傳嗎？</summary>
+    <div>
+      <p>不會。資料存在你的 iPhone 上；開啟 iCloud 同步時存在你自己的 iCloud，我們看不到。詳情請看<a href="privacy.html">隱私權政策</a>。</p>
+    </div>
+  </details>
+  <details>
+    <summary>怎麼刪除所有資料？</summary>
+    <div>
+      <p>刪除 App 就會刪除裝置上的資料。iCloud 裡的資料可以到 iPhone「設定 › Apple 帳號 › iCloud › 管理帳號儲存空間」刪除。刪除後無法復原，建議先匯出備份檔。</p>
+    </div>
+  </details>
+
+  <footer>
+    麻糬寵物 Mochi Pets・SEER INNOVATION TECHNOLOGY CO., LTD.・<a href="privacy.html">隱私權政策</a>
+  </footer>
+</main>
+</body>
+</html>

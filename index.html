@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麻糬寵物 Mochi Pets</title>
+<meta name="description" content="麻糬寵物：讀書、工作的時候，有一隻小寵物陪著你。">
+<style>
+  :root {
+    --bg: #FBF5EC;
+    --card: #FFFFFF;
+    --ink: #4A3A40;
+    --ink-2: #7D6B72;
+    --accent: #D9677F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2A2230;
+      --card: #352B3C;
+      --ink: #F3E9EE;
+      --ink-2: #C3B2BC;
+      --accent: #F29BB0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Hiragino Maru Gothic ProN", "PingFang TC", -apple-system, "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { width: 100%; max-width: 480px; padding: 48px 16px; text-align: center; }
+  h1 { font-size: 30px; margin: 0 0 8px; }
+  p { color: var(--ink-2); margin: 0 0 28px; }
+  nav { display: flex; flex-direction: column; gap: 10px; }
+  a {
+    display: block;
+    padding: 14px 18px;
+    border-radius: 18px;
+    background: var(--card);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>麻糬寵物</h1>
+  <p>讀書、工作的時候，有一隻小寵物陪著你。</p>
+  <nav>
+    <a href="support.html">客服與常見問題</a>
+    <a href="privacy.html">隱私權政策</a>
+  </nav>
+</main>
+</body>
+</html>
