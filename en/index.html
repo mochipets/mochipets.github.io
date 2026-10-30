@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mochi Pets</title>
+<meta name="description" content="Mochi Pets: a little pet keeps you company while you study or work.">
+<style>
+  :root {
+    --bg: #FBF5EC;
+    --card: #FFFFFF;
+    --ink: #4A3A40;
+    --ink-2: #7D6B72;
+    --accent: #D9677F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2A2230;
+      --card: #352B3C;
+      --ink: #F3E9EE;
+      --ink-2: #C3B2BC;
+      --accent: #F29BB0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Hiragino Maru Gothic ProN", "PingFang TC", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { width: 100%; max-width: 480px; padding: 48px 16px; text-align: center; }
+  h1 { font-size: 30px; margin: 0 0 8px; }
+  p { color: var(--ink-2); margin: 0 0 28px; }
+  nav { display: flex; flex-direction: column; gap: 10px; }
+  a {
+    display: block;
+    padding: 14px 18px;
+    border-radius: 18px;
+    background: var(--card);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  a:hover { color: var(--accent); }
+  a.lang {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 4px 8px;
+    background: none;
+    color: var(--ink-2);
+    font-size: 14px;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Mochi Pets</h1>
+  <p>A little pet keeps you company while you study or work.</p>
+  <nav>
+    <a href="support.html">Support &amp; FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+  <a class="lang" href="../">繁體中文</a>
+</main>
+</body>
+</html>

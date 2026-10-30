@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mochi Pets Support</title>
+<meta name="description" content="Support and frequently asked questions for Mochi Pets.">
+<style>
+  :root {
+    --bg: #FBF5EC;
+    --card: #FFFFFF;
+    --ink: #4A3A40;
+    --ink-2: #7D6B72;
+    --accent: #D9677F;
+    --accent-ink: #FFFFFF;
+    --line: #EFE3D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2A2230;
+      --card: #352B3C;
+      --ink: #F3E9EE;
+      --ink-2: #C3B2BC;
+      --accent: #F29BB0;
+      --accent-ink: #2A2230;
+      --line: #463A4E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Hiragino Maru Gothic ProN", "PingFang TC", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { margin-bottom: 24px; }
+  .app { color: var(--ink-2); font-size: 15px; margin: 0 0 4px; }
+  h1 { font-size: 28px; margin: 0 0 6px; line-height: 1.35; }
+  .lead { color: var(--ink-2); margin: 0; }
+  h2 { font-size: 19px; margin: 32px 0 10px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  .contact {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  details {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 0 18px;
+    margin: 0 0 10px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 0;
+    font-weight: 700;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "＋"; float: right; color: var(--ink-2); font-weight: 400; }
+  details[open] summary::after { content: "－"; }
+  details > div { padding: 0 0 14px; color: var(--ink-2); }
+  details > div p:last-child, details > div ul:last-child, details > div ol:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="app">Mochi Pets</p>
+    <h1>Support &amp; FAQ</h1>
+    <p class="lead">Questions, ideas or a bug? We'd love to hear from you.</p>
+  </header>
+  <div class="contact">
+    <p>Email us and we'll usually reply within 3 business days.</p>
+    <p>When reporting a problem, please include your iPhone model, iOS version, app version (Settings › About in the app) and the steps that led to it.</p>
+    <a class="button" href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">Email Support</a>
+  </div>
+
+  <h2>Focus</h2>
+  <details>
+    <summary>What is Strict Mode, and when does a session fail?</summary>
+    <ul>
+      <li>If you leave the app for too long during a focus session, the session fails and gives no rewards. The default limit is 25 seconds; change it in Focus › Settings › Pomodoro Flow &amp; Rules.</li>
+      <li>Locking your phone or taking a call doesn't count as leaving.</li>
+      <li>You get 2 Strict Passes every week. If you're away too long, one is used automatically and your session keeps going (you can turn off Auto-Use Strict Passes).</li>
+      <li>Don't want this rule? Turn off Strict Mode in Settings on the Focus tab.</li>
+    </ul>
+  </details>
+  <details>
+    <summary>I want to use a dictionary or calculator without it counting as leaving</summary>
+    <p>Use Block Apps While Focusing instead: only the distracting apps you choose are blocked, other apps can be used freely, and it won't count as a Strict Mode failure. Set it up in Focus › Settings › Block Distracting Apps; it needs your Face ID or passcode to allow Screen Time.</p>
+  </details>
+  <details>
+    <summary>I didn't get a notification when my focus session ended</summary>
+    <p>In the iPhone Settings app, go to Notifications › Mochi Pets and make sure notifications are on, and check that a Focus or Do Not Disturb isn't silencing them. In the app, Settings › Notifications lets you turn each kind of reminder on or off.</p>
+  </details>
+
+  <h2>Steps and hatching</h2>
+  <details>
+    <summary>My steps aren't updating and I can't get tickets</summary>
+    <ol>
+      <li>Open the Health app › your profile picture (top right) › Apps › Mochi Pets, and make sure Steps is allowed.</li>
+      <li>Go back to Mochi Pets and open the Hatch tab; your steps update automatically.</li>
+      <li>Every 2,000 steps gives 1 ticket, up to 5 a day. Steps entered by hand don't count.</li>
+    </ol>
+  </details>
+
+  <h2>Mochi Pets Plus and payments</h2>
+  <details>
+    <summary>I bought Plus, but it's gone after reinstalling or switching phones</summary>
+    <p>In the app, go to Settings › Mochi Pets Plus and tap Restore Purchases. Make sure you're signed in with the Apple Account you used to buy it.</p>
+  </details>
+  <details>
+    <summary>Will the free trial charge me automatically? How do I cancel?</summary>
+    <p>Monthly and yearly plans include a 7-day free trial, and the app reminds you the day before it ends. To stop it from renewing, cancel in the iPhone Settings app › your Apple Account › Subscriptions. Canceling during the trial means you won't be charged.</p>
+  </details>
+  <details>
+    <summary>How do I cancel a subscription or get a refund?</summary>
+    <ul>
+      <li>Cancel: iPhone Settings › your Apple Account › Subscriptions, or tap Manage Subscription on the Plus page in the app. You keep Plus until the end of the period.</li>
+      <li>Refunds are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+    </ul>
+  </details>
+  <details>
+    <summary>Can I play without Plus?</summary>
+    <p>Yes. Focusing, caring for pets, hatching, seasonal events, Exam Sprint and adventure stories are all free. Plus adds extra looks and advanced stats; it never makes pets stronger or changes hatching odds.</p>
+  </details>
+
+  <h2>Data and new phones</h2>
+  <details>
+    <summary>How do I move my pets to a new phone?</summary>
+    <ol>
+      <li>On your old phone, go to Settings › Backup › Export Backup and save the file to Files or iCloud Drive.</li>
+      <li>Install Mochi Pets on your new phone and choose the file in Settings › Backup › Restore from Backup.</li>
+      <li>If iCloud Sync is on, just sign in with the same Apple Account and your data comes back automatically.</li>
+    </ol>
+  </details>
+  <details>
+    <summary>Is my data uploaded?</summary>
+    <p>No. Your data stays on your iPhone, and in your own iCloud when iCloud Sync is on; we can't see it. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+  </details>
+  <details>
+    <summary>How do I delete all my data?</summary>
+    <p>Deleting the app deletes its data on your device. Data in iCloud can be deleted in iPhone Settings › your Apple Account › iCloud › Manage Account Storage. This can't be undone, so consider exporting a backup first.</p>
+  </details>
+
+  <footer>
+    Mochi Pets · SEER INNOVATION TECHNOLOGY CO., LTD. · <a href="privacy.html">Privacy Policy</a> · <a href="../support.html">繁體中文</a>
+  </footer>
+</main>
+</body>
+</html>
