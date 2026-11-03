@@ -12,6 +12,7 @@
     --ink: #4A3A40;
     --ink-2: #7D6B72;
     --accent: #D9677F;
+    --on-accent: #FFFFFF;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -20,6 +21,7 @@
       --ink: #F3E9EE;
       --ink-2: #C3B2BC;
       --accent: #F29BB0;
+      --on-accent: #2A2230;
     }
   }
   * { box-sizing: border-box; }
@@ -49,6 +51,9 @@
     font-weight: 700;
   }
   a:hover { color: var(--accent); }
+  a.store { background: var(--accent); color: var(--on-accent); }
+  a.store:hover { color: var(--on-accent); opacity: 0.9; }
+  p.note { margin: 12px 0 0; font-size: 14px; text-wrap: balance; }
   a.lang {
     display: inline-block;
     margin-top: 24px;
@@ -65,9 +70,11 @@
   <h1>Mochi Pets</h1>
   <p>A little pet keeps you company while you study or work.</p>
   <nav>
+    <a class="store" href="https://apps.apple.com/app/id6827751359">Download on the App Store</a>
     <a href="support.html">Support &amp; FAQ</a>
     <a href="privacy.html">Privacy Policy</a>
   </nav>
+  <p class="note">The app is in Traditional Chinese for now. English is coming soon.</p>
   <a class="lang" href="../">繁體中文</a>
 </main>
 </body>
