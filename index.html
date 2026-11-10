@@ -2,78 +2,544 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>麻糬寵物 Mochi Pets</title>
-<meta name="description" content="麻糬寵物：讀書、工作的時候，有一隻小寵物陪著你。">
+<meta name="description" content="麻糬寵物是 iPhone 上的番茄鐘。開始專注後，你的寵物會住進動態島和鎖定畫面陪你倒數；每完成一次專注，牠就長大一點。">
+<meta name="apple-itunes-app" content="app-id=6827751359">
+<meta property="og:type" content="website">
+<meta property="og:title" content="麻糬寵物：動態島番茄鐘">
+<meta property="og:description" content="讀書的時候，有一隻小麻糬陪你。免費下載，沒有廣告。">
+<meta property="og:url" content="https://mochipets.github.io/">
+<meta property="og:image" content="https://mochipets.github.io/img/icon.png">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
 <style>
-  :root {
-    --bg: #FBF5EC;
-    --card: #FFFFFF;
-    --ink: #4A3A40;
-    --ink-2: #7D6B72;
-    --accent: #D9677F;
-    --on-accent: #FFFFFF;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #2A2230;
-      --card: #352B3C;
-      --ink: #F3E9EE;
-      --ink-2: #C3B2BC;
-      --accent: #F29BB0;
-      --on-accent: #2A2230;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Hiragino Maru Gothic ProN", "PingFang TC", -apple-system, "Noto Sans TC", sans-serif;
-    line-height: 1.75;
-    -webkit-text-size-adjust: 100%;
-  }
-  main { width: 100%; max-width: 480px; padding: 48px 16px; text-align: center; }
-  h1 { font-size: 30px; margin: 0 0 8px; }
-  p { color: var(--ink-2); margin: 0 0 28px; }
-  nav { display: flex; flex-direction: column; gap: 10px; }
-  a {
-    display: block;
-    padding: 14px 18px;
-    border-radius: 18px;
-    background: var(--card);
-    color: var(--ink);
-    text-decoration: none;
-    font-weight: 700;
-  }
-  a:hover { color: var(--accent); }
-  a.store { background: var(--accent); color: var(--on-accent); }
-  a.store:hover { color: var(--on-accent); opacity: 0.9; }
-  a.lang {
-    display: inline-block;
-    margin-top: 24px;
-    padding: 4px 8px;
-    background: none;
-    color: var(--ink-2);
-    font-size: 14px;
-    font-weight: 400;
-  }
+/* Layout: neo-brutalist (system fonts only, nothing loaded from other sites) sticker board. One column of thick-outlined blocks with hard offset shadows; hero splits words | phone on wide screens; screen strip scrolls sideways on phones. Deliberately light-only. */
+:root {
+  --paper: #FFF3DC;
+  --ink: #141014;
+  --ink-2: #3F363D;
+  --white: #FFFFFF;
+  --pink: #FF9DB8;
+  --yellow: #FFD75E;
+  --mint: #8FE3BF;
+  --sky: #9ED3FF;
+  --lilac: #C9B8FF;
+  --bw: 3px;
+  --sh: 5px;
+  --font-display: ui-rounded, "SF Pro Rounded", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+img { max-width: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+  background-image: radial-gradient(rgba(20, 16, 20, 0.13) 1.2px, transparent 1.3px);
+  background-size: 22px 22px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 800; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+p, ul, dl, dd, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; }
+.nw { white-space: nowrap; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+
+.wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-left: max(18px, env(safe-area-inset-left, 0px));
+  padding-right: max(18px, env(safe-area-inset-right, 0px));
+}
+main { display: flex; flex-direction: column; gap: 84px; padding-block: 28px 0; }
+
+/* Shared block look */
+.box {
+  background: var(--white);
+  border: var(--bw) solid var(--ink);
+  border-radius: 16px;
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+}
+.chip {
+  display: inline-flex; align-items: center;
+  padding: 2px 12px; border: var(--bw) solid var(--ink); border-radius: 999px;
+  background: var(--white); font-weight: 700; font-size: 14px; line-height: 1.6; white-space: nowrap;
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 56px; padding: 0 26px;
+  background: var(--yellow); color: var(--ink);
+  border: var(--bw) solid var(--ink); border-radius: 14px;
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+  font-family: var(--font-display); font-weight: 800; font-size: 18px;
+  text-decoration: none; white-space: nowrap;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: calc(var(--sh) + 2px) calc(var(--sh) + 2px) 0 var(--ink); }
+.btn:active { transform: translate(var(--sh), var(--sh)); box-shadow: 0 0 0 var(--ink); }
+.btn .arrow { font-size: 20px; line-height: 1; }
+
+/* Top bar */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 10px; }
+.top-brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.top-brand img { width: 40px; height: 40px; border-radius: 10px; border: var(--bw) solid var(--ink); }
+.top-brand b { font-family: var(--font-display); font-weight: 800; font-size: 19px; }
+.top-brand span { color: var(--ink-2); font-size: 13px; }
+.top .btn { min-height: 42px; padding: 0 16px; font-size: 15px; box-shadow: 3px 3px 0 var(--ink); }
+
+/* Hero */
+.hero { display: grid; gap: 44px; align-items: center; }
+.hero-text { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+h1 { font-size: clamp(38px, 6.6vw, 68px); line-height: 1.18; }
+.mark {
+  display: inline-block; background: var(--pink); padding: 0 10px;
+  border: var(--bw) solid var(--ink); border-radius: 12px;
+  transform: rotate(-2deg); box-shadow: 4px 4px 0 var(--ink);
+}
+.lead { font-size: 17px; max-width: 32em; color: var(--ink-2); }
+
+.island-demo { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.island {
+  display: inline-flex; align-items: center; justify-content: space-between;
+  width: 200px; height: 46px; padding: 0 16px 0 7px;
+  border-radius: 999px; background: var(--ink); color: var(--white);
+  border: var(--bw) solid var(--ink);
+  box-shadow: var(--sh) var(--sh) 0 var(--pink);
+}
+.island .pet {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: url("img/icon.png") center 66% / 170% no-repeat;
+}
+.island-time { font: 800 18px/1 ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; font-variant-numeric: tabular-nums; color: var(--yellow); }
+.island-demo figcaption { font-size: 14px; font-weight: 700; max-width: 18em; }
+
+.cta { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; }
+.facts .chip:nth-child(1) { background: var(--mint); }
+.facts .chip:nth-child(2) { background: var(--sky); }
+.facts .chip:nth-child(3) { background: var(--white); }
+.facts .chip:nth-child(4) { background: var(--lilac); }
+
+.hero-phone { position: relative; display: flex; justify-content: center; padding: 26px 10px 18px; min-width: 0; }
+.hero-phone::before {
+  content: ""; position: absolute; inset: 0 6% 6% 6%;
+  background: var(--yellow); border: var(--bw) solid var(--ink); border-radius: 22px;
+  transform: rotate(3deg); z-index: 0;
+}
+.phone {
+  position: relative; z-index: 1;
+  width: min(280px, 70vw); max-width: 100%; height: auto; aspect-ratio: 460 / 1000;
+  border: 4px solid var(--ink); border-radius: 34px;
+  box-shadow: 8px 8px 0 var(--ink); background: var(--white);
+}
+.sticker {
+  position: absolute; z-index: 2; right: 2%; top: 8px;
+  padding: 6px 14px; background: var(--pink);
+  border: var(--bw) solid var(--ink); border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--ink);
+  font-family: var(--font-display); font-weight: 800; font-size: 15px;
+  transform: rotate(8deg); white-space: nowrap;
+}
+
+/* Ticker */
+.ticker {
+  background: var(--pink); border-block: var(--bw) solid var(--ink);
+  overflow: hidden; white-space: nowrap;
+}
+.ticker-track { display: inline-flex; padding-block: 12px; animation: slide 26s linear infinite; }
+.ticker-track span { font-family: var(--font-display); font-weight: 800; font-size: 20px; padding-inline: 18px; }
+.ticker-track i { font-style: normal; }
+@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } .btn { transition: none; } }
+
+/* Section heads */
+.section-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+h2 { font-size: clamp(28px, 4vw, 40px); line-height: 1.25; }
+.section-head .chip { background: var(--yellow); }
+h3 { font-size: 21px; line-height: 1.35; }
+
+/* Day */
+.day-grid { display: grid; gap: 22px; }
+.day-card { padding: 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.day-card:nth-child(1) { background: var(--pink); }
+.day-card:nth-child(2) { background: var(--mint); }
+.day-card:nth-child(3) { background: var(--sky); }
+.day-card .chip { align-self: flex-start; }
+.day-card p:last-child { color: var(--ink); }
+
+/* Screens */
+.strip-scroll { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 4px 10px 14px 4px; margin: -4px -10px -14px -4px; }
+.strip { display: grid; grid-auto-flow: column; grid-auto-columns: min(52vw, 210px); gap: 18px; }
+.strip li { scroll-snap-align: start; min-width: 0; display: flex; flex-direction: column; overflow: hidden; }
+.strip img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 460 / 1000; border-bottom: var(--bw) solid var(--ink); }
+.strip p { padding: 10px 12px 12px; font-size: 14px; line-height: 1.6; }
+.strip b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 17px; }
+.strip li:nth-child(1) p { background: var(--yellow); }
+.strip li:nth-child(2) p { background: var(--mint); }
+.strip li:nth-child(3) p { background: var(--lilac); }
+.strip li:nth-child(4) p { background: var(--sky); }
+.strip li:nth-child(5) p { background: var(--pink); }
+
+/* Features */
+.feat { display: grid; gap: 22px; }
+.feat .box { overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.feat dt {
+  font-family: var(--font-display); font-weight: 800; font-size: 20px; line-height: 1.4;
+  padding: 10px 18px; border-bottom: var(--bw) solid var(--ink);
+}
+.feat .box:nth-child(1) dt { background: var(--yellow); }
+.feat .box:nth-child(2) dt { background: var(--mint); }
+.feat .box:nth-child(3) dt { background: var(--pink); }
+.feat .box:nth-child(4) dt { background: var(--sky); }
+.feat .box:nth-child(5) dt { background: var(--lilac); }
+.feat .box:nth-child(6) dt { background: var(--yellow); }
+.feat dd { padding: 16px 18px 18px; }
+.feat li { position: relative; padding-left: 22px; }
+.feat li + li { margin-top: 6px; }
+.feat li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 10px; height: 10px; background: var(--ink); border-radius: 3px; transform: rotate(45deg);
+}
+
+/* Plus */
+.plus { background: var(--lilac); padding: clamp(22px, 4vw, 40px); display: flex; flex-direction: column; gap: 24px; }
+.plus .section-head { margin-bottom: 0; }
+.plus .section-head .chip { background: var(--white); }
+.plus-intro { font-size: 17px; max-width: 34em; }
+.plus-list { display: grid; gap: 16px; }
+.plus-list li { padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.plus-list b { font-family: var(--font-display); font-weight: 800; font-size: 18px; }
+.price { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; }
+.price .chip { font-variant-numeric: tabular-nums; }
+
+/* Trust */
+.trust-grid { display: grid; gap: 22px; }
+.trust-grid li { padding: 20px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.trust-grid .num {
+  width: 40px; height: 40px; display: grid; place-items: center;
+  border: var(--bw) solid var(--ink); border-radius: 50%; background: var(--mint);
+  font-family: var(--font-display); font-weight: 800; font-size: 18px;
+}
+.trust-grid li:nth-child(2) .num { background: var(--sky); }
+.trust-grid li:nth-child(3) .num { background: var(--pink); }
+.trust-grid li:nth-child(4) .num { background: var(--yellow); }
+
+/* Footer */
+.foot { background: var(--ink); color: var(--white); border-top: var(--bw) solid var(--ink); }
+.foot-inner { display: flex; flex-direction: column; gap: 30px; padding-block: 48px 40px; }
+.foot-cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.foot-cta img { width: 60px; height: 60px; border-radius: 14px; border: var(--bw) solid var(--white); }
+.foot-name { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.2; }
+.foot-sub { color: #D9D1D7; font-size: 14px; }
+.foot .btn { margin-left: auto; border-color: var(--white); box-shadow: var(--sh) var(--sh) 0 var(--pink); }
+.foot .btn:hover { box-shadow: calc(var(--sh) + 2px) calc(var(--sh) + 2px) 0 var(--pink); }
+.foot .btn:active { box-shadow: 0 0 0 var(--pink); }
+.contact { display: flex; flex-direction: column; gap: 14px; font-size: 14px; }
+.mail-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mail { font-weight: 700; font-size: 16px; user-select: all; overflow-wrap: anywhere; }
+.copy {
+  font: inherit; font-weight: 700; font-size: 13px; color: var(--ink); background: var(--yellow);
+  border: 2px solid var(--white); border-radius: 999px; padding: 2px 14px; cursor: pointer;
+}
+.links { display: flex; gap: 8px 22px; flex-wrap: wrap; }
+.links a { color: var(--white); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.links a:hover { color: var(--yellow); }
+.foot a:focus-visible, .foot button:focus-visible { outline-color: var(--yellow); }
+
+@media (min-width: 820px) {
+  .hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 56px; }
+  .day-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .strip { grid-auto-flow: row; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-columns: auto; gap: 20px; }
+  .strip-scroll { overflow: visible; }
+  .feat { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .plus-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  :root { --bw: 2.5px; --sh: 4px; }
+  main { gap: 64px; padding-block: 18px 0; }
+  .top-brand span { display: none; }
+  .foot .btn { margin-left: 0; width: 100%; }
+}
 </style>
 </head>
 <body>
 <main>
-  <h1>麻糬寵物</h1>
-  <p>讀書、工作的時候，有一隻小寵物陪著你。</p>
-  <nav>
-    <a class="store" href="https://apps.apple.com/app/id6827751359">在 App Store 下載</a>
-    <a href="support.html">客服與常見問題</a>
-    <a href="privacy.html">隱私權政策</a>
-  </nav>
-  <a class="lang" href="en/">English</a>
+  <div class="wrap">
+    <nav class="box top" aria-label="麻糬寵物">
+      <div class="top-brand">
+        <img src="img/icon.png" alt="" width="40" height="40">
+        <b>麻糬寵物</b>
+        <span>Mochi Pets</span>
+      </div>
+      <a class="btn" href="https://apps.apple.com/app/id6827751359">下載</a>
+    </nav>
+  </div>
+
+  <header class="wrap hero">
+    <div class="hero-text">
+      <h1>讀書的時候，<br>有一隻小<span class="mark">麻糬</span><span class="nw">陪你。</span></h1>
+      <p class="lead">麻糬寵物是 iPhone 上的番茄鐘。開始專注後，你的寵物會住進動態島和鎖定畫面陪你倒數；每完成一次專注，牠就長大一點。</p>
+      <figure class="island-demo">
+        <div class="island" role="img" aria-label="動態島示意：寵物陪你倒數">
+          <span class="pet"></span>
+          <span class="island-time" id="islandTime">24:59</span>
+        </div>
+        <figcaption>切到別的 App，寵物還在動態島<span class="nw">陪你倒數。</span></figcaption>
+      </figure>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/id6827751359">在 App Store 下載 <span class="arrow" aria-hidden="true">→</span></a>
+        <div class="facts">
+          <span class="chip">免費下載</span>
+          <span class="chip">沒有廣告</span>
+          <span class="chip">iOS 17 以上</span>
+          <span class="chip">繁體中文、English</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <span class="sticker">動態島番茄鐘</span>
+      <img class="phone" src="img/screen-1.jpg" width="460" height="1000" alt="麻糬寵物的主頁：小兔子寵物坐在房間的地毯上，下面是餵食、摸摸、洗澡、玩耍、睡覺的按鈕">
+    </div>
+  </header>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>專注 <i>✦</i></span><span>長大 <i>✦</i></span><span>走路換蛋 <i>✦</i></span><span>讀書群組 <i>✦</i></span><span>AR 拍照 <i>✦</i></span><span>佈置房間 <i>✦</i></span><span>考試衝刺 <i>✦</i></span>
+      <span>專注 <i>✦</i></span><span>長大 <i>✦</i></span><span>走路換蛋 <i>✦</i></span><span>讀書群組 <i>✦</i></span><span>AR 拍照 <i>✦</i></span><span>佈置房間 <i>✦</i></span><span>考試衝刺 <i>✦</i></span>
+    </div>
+  </div>
+
+  <section class="wrap" aria-labelledby="day-title">
+    <div class="section-head">
+      <h2 id="day-title">一天裡的麻糬</h2>
+    </div>
+    <div class="day-grid">
+      <div class="box day-card">
+        <span class="chip">讀書時</span>
+        <h3>一起專注</h3>
+        <p>選 25 分鐘或自己定時間，按下開始。寵物在動態島陪你倒數，完成後拿到金幣和經驗值。</p>
+      </div>
+      <div class="box day-card">
+        <span class="chip">休息時</span>
+        <h3>照顧牠</h3>
+        <p>摸摸牠、餵牠鯛魚燒或珍珠奶茶、玩小遊戲，或用 AR 讓牠站上你的書桌合照。</p>
+      </div>
+      <div class="box day-card">
+        <span class="chip">走路時</span>
+        <h3>換寵物蛋</h3>
+        <p>連結 Apple 健康，每走 2,000 步換一張抽獎券。抽到的蛋要搖一搖手機才會孵化。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="screens-title">
+    <div class="section-head">
+      <h2 id="screens-title">App 裡的畫面</h2>
+    </div>
+    <div class="strip-scroll">
+      <ul class="strip">
+        <li class="box">
+          <img src="img/screen-2.jpg" width="460" height="1000" loading="lazy" alt="專注畫面：寵物在圓形計時器中間，顯示 24:59">
+          <p><b>專注</b>倒數時可以暫停、開環境音、看待辦。</p>
+        </li>
+        <li class="box">
+          <img src="img/screen-3.jpg" width="460" height="1000" loading="lazy" alt="讀書群組的教室：九隻寵物各自坐在書桌前，標示讀書中或休息中">
+          <p><b>讀書群組</b>大家的寵物坐在同一間教室。</p>
+        </li>
+        <li class="box">
+          <img src="img/screen-4.jpg" width="460" height="1000" loading="lazy" alt="抽寵物畫面：一顆蛋和走路換到的抽獎券">
+          <p><b>抽寵物</b>走路換抽獎券，搖一搖孵出新寵物。</p>
+        </li>
+        <li class="box">
+          <img src="img/screen-5.jpg" width="460" height="1000" loading="lazy" alt="AR 拍照：寵物站在真實的木頭書桌上">
+          <p><b>AR 拍照</b>讓寵物站上你真的書桌。</p>
+        </li>
+        <li class="box">
+          <img src="img/screen-6.jpg" width="460" height="1000" loading="lazy" alt="讀書打卡：書桌照片加上本週讀書時數的圖表">
+          <p><b>讀書打卡</b>附上今天讀了多久，分享到限時動態。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="feat-title">
+    <div class="section-head">
+      <h2 id="feat-title">還可以做什麼</h2>
+    </div>
+    <dl class="feat">
+      <div class="box">
+        <dt>專注</dt>
+        <dd><ul>
+          <li>15、25、45、60 分鐘，或 1 到 180 分鐘自訂；也有碼表模式</li>
+          <li>在動態島直接暫停、繼續、勾掉待辦</li>
+          <li>雨聲、海浪、營火、森林、白噪音，寵物會跟著撐小雨傘、戴耳機</li>
+          <li>嚴格模式，或用「螢幕使用時間」在專注時封鎖分心的 App</li>
+          <li>每日目標、連續天數、各科時間和每週報告</li>
+        </ul></dd>
+      </div>
+      <div class="box">
+        <dt>和朋友一起讀書</dt>
+        <dd><ul>
+          <li>交換好友碼加朋友，看誰正在讀書、這週誰讀得多</li>
+          <li>讀書群組按「揪讀書」一起開始，每個人的寵物坐在同一間教室</li>
+          <li>每天可以去朋友家偷吃一個點心，小心被牠的寵物抓到</li>
+          <li>朋友功能預設關閉，也不能搜尋陌生人</li>
+        </ul></dd>
+      </div>
+      <div class="box">
+        <dt>寵物</dt>
+        <dd><ul>
+          <li>15 種寵物，抽中的機率公開，有保底，還有 1% 的異色</li>
+          <li>每隻都有自己的個性和作息，可以進化成陪伴型、學霸型、活力型或美食家</li>
+          <li>自己捏一隻麻糬：顏色、耳朵、眼睛、花紋、角和翅膀自由搭配</li>
+          <li>寵物日記記下你們的每一個第一次</li>
+        </ul></dd>
+      </div>
+      <div class="box">
+        <dt>拍照和房間</dt>
+        <dd><ul>
+          <li>AR 拍照：寵物站在真的書桌或地板上，有影子、近大遠小</li>
+          <li>讀書打卡：拍下書桌，自動加上今天讀了多久和連續天數</li>
+          <li>用金幣買家具、衣服和牆紙，房間自己佈置</li>
+        </ul></dd>
+      </div>
+      <div class="box">
+        <dt>考試衝刺</dt>
+        <dd><ul>
+          <li>設定考試日和每科想讀的時間，自動排到每一天，落後了會重新分配</li>
+          <li>主頁有考試倒數，全部達成拿到「必勝頭帶」</li>
+        </ul></dd>
+      </div>
+      <div class="box">
+        <dt>季節活動</dt>
+        <dd><ul>
+          <li>春日櫻花祭、夏日海灘派對、中秋賞月夜、萬聖節糖果派對、聖誕雪花慶典，每年都會回來</li>
+          <li>今年的聖誕雪花慶典是 12 月 15 日到 31 日</li>
+        </ul></dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="wrap" aria-labelledby="plus-title">
+    <div class="box plus">
+      <div class="section-head">
+        <h2 id="plus-title">麻糬寵物 Plus</h2>
+        <span class="chip">選購</span>
+      </div>
+      <p class="plus-intro">上面的功能都免費，也沒有廣告。Plus 是選購的，給想多一點變化的人。</p>
+      <ul class="plus-list">
+        <li class="box"><b>自創寵物</b><span>每個月孵一隻自己捏的麻糬，退訂後牠還是你的。</span></li>
+        <li class="box"><b>和朋友一起養</b><span>邀請朋友或另一半一起養一隻寵物，朋友不用 Plus 也能加入。</span></li>
+        <li class="box"><b>毛色和衣櫃</b><span>櫻花粉、薄荷綠等毛色，學士帽、讀書耳機等服裝。</span></li>
+        <li class="box"><b>進階統計</b><span>專注品質、最適合你的專注長度、月報和學期回顧。</span></li>
+      </ul>
+      <div class="price">
+        <span class="chip">月費 NT$49</span>
+        <span class="chip">年費 NT$399</span>
+        <span class="chip">終身 NT$599</span>
+        <span>月費和年費可以免費試用 7 天，結束前一天會提醒你。</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="trust-title">
+    <div class="section-head">
+      <h2 id="trust-title">安心使用</h2>
+    </div>
+    <ul class="trust-grid">
+      <li class="box">
+        <span class="num" aria-hidden="true">✓</span>
+        <h3>沒有廣告和追蹤</h3>
+        <p>核心功能都免費，App 裡沒有廣告，也不追蹤你。</p>
+      </li>
+      <li class="box">
+        <span class="num" aria-hidden="true">✓</span>
+        <h3>資料在你自己手上</h3>
+        <p>寵物、紀錄和照片存在你的 iPhone 和你自己的 iCloud，我們看不到。步數只留在 iPhone 上。</p>
+      </li>
+      <li class="box">
+        <span class="num" aria-hidden="true">✓</span>
+        <h3>朋友只看得到好友卡</h3>
+        <p>朋友功能預設關閉。打開後，朋友看得到你的暱稱、寵物的樣子和讀書時數。</p>
+      </li>
+      <li class="box">
+        <span class="num" aria-hidden="true">✓</span>
+        <h3>每個人都能用</h3>
+        <p>支援深色模式、動態字體、VoiceOver 和「減少動態效果」。</p>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <div class="foot-cta">
+        <img src="img/icon.png" alt="" width="60" height="60">
+        <div>
+          <p class="foot-name">麻糬寵物</p>
+          <p class="foot-sub">動態島番茄鐘 · iPhone</p>
+        </div>
+        <a class="btn" href="https://apps.apple.com/app/id6827751359">在 App Store 下載 <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="contact">
+        <div class="mail-row">
+          <span>有問題寫信給我們</span>
+          <span class="mail" id="mail">mochipets.care@gmail.com</span>
+          <button class="copy" id="copyMail" type="button">複製</button>
+        </div>
+        <nav class="links" aria-label="其他連結">
+          <a href="support.html">常見問題</a>
+          <a href="manual.pdf">使用說明書</a>
+          <a href="privacy.html">隱私權政策</a>
+          <a href="terms.html">社群使用條款</a>
+          <a href="https://www.instagram.com/mochipets.care/">Instagram @mochipets.care</a>
+          <a href="en/" lang="en">English</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 </main>
+
+<script>
+(function () {
+  var el = document.getElementById('islandTime');
+  var left = 24 * 60 + 59;
+  setInterval(function () {
+    left = left > 0 ? left - 1 : 25 * 60;
+    var m = Math.floor(left / 60), s = left % 60;
+    el.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }, 1000);
+
+  var btn = document.getElementById('copyMail');
+  var mail = document.getElementById('mail');
+  btn.addEventListener('click', function () {
+    var text = mail.textContent;
+    function selectIt() {
+      var r = document.createRange();
+      r.selectNodeContents(mail);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(r);
+      btn.textContent = '已選取';
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = '已複製';
+        setTimeout(function () { btn.textContent = '複製'; }, 1800);
+      }, selectIt);
+    } catch (e) { selectIt(); }
+  });
+})();
+</script>
 </body>
 </html>
