@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assistance Mochi Pets</title>
+<meta name="description" content="Assistance et questions fréquentes pour Mochi Pets.">
+<style>
+  :root {
+    --bg: #FBF5EC;
+    --card: #FFFFFF;
+    --ink: #4A3A40;
+    --ink-2: #7D6B72;
+    --accent: #D9677F;
+    --accent-ink: #FFFFFF;
+    --line: #EFE3D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2A2230;
+      --card: #352B3C;
+      --ink: #F3E9EE;
+      --ink-2: #C3B2BC;
+      --accent: #F29BB0;
+      --accent-ink: #2A2230;
+      --line: #463A4E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Hiragino Maru Gothic ProN", "PingFang TC", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { margin-bottom: 24px; }
+  .app { color: var(--ink-2); font-size: 15px; margin: 0 0 4px; }
+  h1 { font-size: 28px; margin: 0 0 6px; line-height: 1.35; }
+  .lead { color: var(--ink-2); margin: 0; }
+  h2 { font-size: 19px; margin: 32px 0 10px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  .contact {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  details {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 0 18px;
+    margin: 0 0 10px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 0;
+    font-weight: 700;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "＋"; float: right; color: var(--ink-2); font-weight: 400; }
+  details[open] summary::after { content: "－"; }
+  details > div { padding: 0 0 14px; color: var(--ink-2); }
+  details > div p:last-child, details > div ul:last-child, details > div ol:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="app">Mochi Pets</p>
+    <h1>Assistance et FAQ</h1>
+    <p class="lead">Une question, une idée ou un bug ? Nous serons ravis de te lire.</p>
+  </header>
+  <div class="contact">
+    <p>Envoie-nous un e-mail : nous répondons en général sous 3 jours ouvrés.</p>
+    <p>Pour signaler un problème, indique le modèle de ton iPhone, ta version d'iOS, la version de l'app (Réglages › À propos dans l'app) et les étapes qui ont mené au problème.</p>
+    <a class="button" href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">Écrire à l'assistance</a>
+  </div>
+
+  <h2>Concentration</h2>
+  <details>
+    <summary>Qu'est-ce que le Mode strict, et quand une séance échoue-t-elle ?</summary>
+    <div>
+      <ul>
+        <li>Si tu quittes l'app trop longtemps pendant une séance de concentration, la séance échoue et ne rapporte aucune récompense. La limite par défaut est de 25 secondes ; tu peux la modifier dans Concentration › Réglages › Déroulé et règles du pomodoro.</li>
+        <li>Verrouiller ton téléphone ou prendre un appel ne compte pas comme une sortie de l'app.</li>
+        <li>Tu as 2 jokers chaque semaine. Si tu t'absentes trop longtemps, un joker est utilisé automatiquement et ta séance continue (tu peux désactiver l'option Jokers automatiques).</li>
+        <li>Tu ne veux pas de cette règle ? Désactive le Mode strict dans les Réglages de l'onglet Concentration.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Je veux utiliser un dictionnaire ou une calculatrice sans que ça compte comme une sortie de l'app</summary>
+    <div>
+      <p>Utilise plutôt l'option Bloquer les apps pendant la concentration : seules les apps distrayantes que tu choisis sont bloquées, tu peux utiliser les autres librement, et ça ne compte pas comme un échec du Mode strict. Configure-la dans Concentration › Réglages › Bloquer les apps distrayantes ; il faut ton Face ID ou ton code pour autoriser Temps d'écran.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Je n'ai pas reçu de notification à la fin de ma séance</summary>
+    <div>
+      <p>Dans l'app Réglages de l'iPhone, va dans Notifications › Mochi Pets et vérifie que les notifications sont activées, puis qu'aucun mode de concentration ni Ne pas déranger ne les masque. Dans l'app, Réglages › Notifications te permet d'activer ou de désactiver chaque type de rappel.</p>
+    </div>
+  </details>
+
+  <h2>Pas et éclosion</h2>
+  <details>
+    <summary>Mes pas ne se mettent pas à jour et je n'obtiens pas de tickets</summary>
+    <div>
+      <ol>
+        <li>Ouvre l'app Santé › ta photo de profil (en haut à droite) › Apps › Mochi Pets, et vérifie que Pas est autorisé.</li>
+        <li>Reviens dans Mochi Pets et ouvre l'onglet Éclosion : tes pas se mettent à jour automatiquement.</li>
+        <li>Chaque tranche de 2 000 pas donne 1 ticket, jusqu'à 5 par jour. Les pas saisis à la main ne comptent pas.</li>
+      </ol>
+    </div>
+  </details>
+
+  <h2>Mochi Pets Plus et paiements</h2>
+  <details>
+    <summary>J'ai acheté Plus, mais il a disparu après une réinstallation ou un changement de téléphone</summary>
+    <div>
+      <p>Dans l'app, va dans Réglages › Mochi Pets Plus et touche Restaurer les achats. Vérifie que tu utilises bien le compte Apple avec lequel tu l'as acheté.</p>
+    </div>
+  </details>
+  <details>
+    <summary>L'essai gratuit devient-il payant automatiquement ? Comment l'annuler ?</summary>
+    <div>
+      <p>Les formules mensuelle et annuelle incluent un essai gratuit de 7 jours, et l'app te prévient la veille de la fin. Pour éviter le renouvellement, annule dans l'app Réglages de l'iPhone › ton compte Apple › Abonnements. Si tu annules pendant l'essai, tu ne paieras rien.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Comment annuler un abonnement ou obtenir un remboursement ?</summary>
+    <div>
+      <ul>
+        <li>Annuler : Réglages de l'iPhone › ton compte Apple › Abonnements, ou touche Gérer l'abonnement sur la page Plus dans l'app. Tu gardes Plus jusqu'à la fin de la période.</li>
+        <li>Les remboursements sont gérés par Apple sur <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Est-ce que je peux jouer sans Plus ?</summary>
+    <div>
+      <p>Oui. La concentration, les soins aux animaux, l'éclosion, les événements saisonniers, le Sprint de révisions et les Aventures sont tous gratuits. Plus ajoute des looks supplémentaires et des statistiques avancées ; il ne rend jamais les animaux plus forts et ne change jamais les probabilités d'éclosion.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Est-ce que je peux offrir Plus à un ami ?</summary>
+    <div>
+      <p>Oui. Sur la page d'un ami, touche Offrir Plus, choisis 1 mois ou 1 an et ajoute un petit mot si tu veux. Ton ami trouve le cadeau dans Nouveau, sur la page Amis, et le cadeau démarre quand il l'ouvre. S'il a déjà Plus, il peut le garder pour plus tard.</p>
+      <p>Les cadeaux ne peuvent pas être échangés contre autre chose. Seule la personne qui a fait l'achat peut demander un remboursement à Apple, et un remboursement met fin au Plus offert à ton ami. Tu retrouves les cadeaux que tu as envoyés dans Réglages, sous Mochi Pets Plus › Cadeaux envoyés.</p>
+    </div>
+  </details>
+
+  <h2>Amis et Groupes d'étude</h2>
+  <details>
+    <summary>Comment ajouter un ami ?</summary>
+    <div>
+      <ol>
+        <li>Dans l'onglet Animal, touche ☰ en haut à droite › Amis, choisis un pseudo et touche Commencer. Amis nécessite iCloud.</li>
+        <li>Touche Partager le code ami pour envoyer le tien, ou touche Ajouter un ami et saisis le code de ton ami.</li>
+        <li>Dès qu'il accepte, vous êtes amis.</li>
+      </ol>
+      <p>Pour les Groupes d'étude, touche Groupes d'étude dans le menu ☰ (ou passe à Groupes d'étude en haut de la page Amis), puis Créer un groupe, ou Rejoindre le groupe avec un code du groupe.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Qu'est-ce que je gagne en invitant des amis ?</summary>
+    <div>
+      <p>Pendant ses 7 premiers jours, un nouveau joueur saisit ton code ami dans Ajouter un ami et termine une séance de concentration d'au moins 10 minutes (arrêter avant la fin ne compte pas). Tu reçois 300 pièces et 3 tickets, et cette personne reçoit 200 pièces et 1 ticket. Tu peux en profiter jusqu'à 5 fois.</p>
+      <p>Chaque compte iCloud ne peut utiliser qu'une seule invitation, même après une réinstallation. Les récompenses arrivent quand tu ouvres l'app ou la page Amis. S'il en manque une, vérifie que vous êtes tous les deux connectés à Internet, puis rouvre Amis.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Comment envoyer des messages ou parler en classe ?</summary>
+    <div>
+      <p>Entre amis, il suffit de toucher Message sur la page de l'autre ; les membres d'un groupe d'étude peuvent toucher Discussion sur la page du groupe. Tout ce que tu écris dans la Classe d'un groupe s'affiche au-dessus de ton animal pendant 15 minutes et apparaît aussi dans la discussion du groupe.</p>
+      <p>Les messages ne peuvent contenir que du texte et des emoji, pas de photos. Ils sont conservés 30 jours, et tu peux maintenir le doigt sur ton propre message pour en annuler l'envoi. Les mots offensants sont remplacés automatiquement par des astérisques. Pour ne plus recevoir les notifications d'un groupe, désactive Notifications des discussions de groupe dans Réglages du groupe.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Qu'est-ce que mes amis peuvent voir ?</summary>
+    <div>
+      <p>Ton pseudo, ton avatar, l'apparence de ton compagnon, si tu es en train d'étudier, tes minutes d'aujourd'hui et de cette semaine, le nombre de friandises dans ton sac, et les messages que tu leur envoies. Ils ne peuvent pas voir tes réflexions, tes matières ni tes autres photos. Il est impossible de chercher des inconnus : seules les personnes avec qui tu partages un code ami ou un code du groupe peuvent te trouver.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Comment changer la photo de la classe ?</summary>
+    <div>
+      <p>Si le créateur d'un groupe a Plus, il peut aller dans Réglages du groupe › Photo de fond et toucher Utiliser ta photo : la classe de chaque membre du groupe affiche alors cette photo. Il peut en choisir une autre plus tard, ou toucher Retirer la photo pour revenir au thème. Quand Avertissement de contenu sensible ou Sécurité des communications est activé, les photos sont vérifiées sur l'iPhone avant d'être ajoutées, et celles qui semblent inappropriées ne peuvent pas l'être. Merci de ne pas utiliser de photos d'autres personnes.</p>
+      <p>Tu ne veux pas voir la photo du créateur ? Désactive Afficher la photo de fond dans Réglages du groupe : seule ta classe revient au thème.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Comment changer mon avatar ?</summary>
+    <div>
+      <p>Par défaut, ton avatar est ton compagnon. Si tu as Plus, touche ton avatar sur la page Amis, touche Utiliser ta photo, ajuste-la et ajoute-la. Tu peux en choisir une autre plus tard, ou toucher Revenir à mon animal pour supprimer la photo. Si le créateur d'un groupe a Plus, il peut aussi ajouter une photo dans Réglages du groupe › Avatar du groupe. Seuls tes amis et les membres du même groupe peuvent voir ces photos. Quand Avertissement de contenu sensible ou Sécurité des communications est activé, les photos sont vérifiées sur l'iPhone avant d'être ajoutées, et celles qui semblent inappropriées ne peuvent pas l'être. Merci de ne pas utiliser de photos d'autres personnes ni de contenu inapproprié.</p>
+      <p>Tu vois un avatar inapproprié ? Ouvre la page de cet ami ou de ce membre, touche Plus d'options en haut à gauche et choisis Signaler l'avatar. Un avatar de groupe se signale dans Réglages du groupe. Une fois signalée, la photo n'apparaît plus sur ton écran.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Quelqu'un me met mal à l'aise. Que faire ?</summary>
+    <div>
+      <p><strong>Signaler un message :</strong> maintiens le doigt dessus, touche Signaler et choisis un motif. Dans la Classe, maintiens le doigt sur l'animal de quelqu'un pour signaler ce qu'il a dit. <strong>Signaler une photo :</strong> touche Signaler cette photo dans Réglages du groupe. Le contenu signalé disparaît aussitôt de ton écran. Nous examinons les signalements chaque jour et agissons sous 24 heures.</p>
+      <p><strong>Bloquer :</strong> touche son message de manière prolongée puis Bloquer, ou sur sa page, touche Plus d'options › Retirer des amis, puis Retirer et bloquer. Tu ne verras plus ses messages ni rien de ce qu'il envoie, et il ne pourra plus t'écrire. Dans un groupe d'étude, tu peux bloquer quelqu'un ou quitter le groupe, et le créateur du groupe peut retirer des membres.</p>
+      <p>Si un pseudo ou un nom de groupe est inapproprié, <a href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">écris-nous</a> en indiquant le pseudo et le code ami concernés (ou le code du groupe), et nous nous en occuperons au plus vite.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Comment désactiver Amis ?</summary>
+    <div>
+      <p>Sur la page Amis, touche Réglages Amis en haut à droite › Désactiver Amis. Ta carte ami est supprimée, tu quittes tous les groupes d'étude (les groupes que tu as créés sont dissous) et l'envoi de tes messages est annulé. Ta liste d'amis reste dans ton app : tes amis seront toujours là si tu réactives la fonction. Les enregistrements des cadeaux Plus que tu as offerts servent de preuve d'achat et ne sont pas supprimés ; pour les faire supprimer, <a href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">écris-nous</a>.</p>
+    </div>
+  </details>
+
+  <h2>Données et nouveau téléphone</h2>
+  <details>
+    <summary>Comment transférer mes animaux sur un nouveau téléphone ?</summary>
+    <div>
+      <ol>
+        <li>Sur ton ancien téléphone, va dans Réglages › Sauvegarde › Exporter la sauvegarde et enregistre le fichier dans Fichiers ou iCloud Drive.</li>
+        <li>Installe Mochi Pets sur ton nouveau téléphone et choisis le fichier dans Réglages › Sauvegarde › Restaurer une sauvegarde.</li>
+        <li>Si la Synchro iCloud est activée, il te suffit de te connecter avec le même compte Apple : tes données reviennent automatiquement.</li>
+      </ol>
+    </div>
+  </details>
+  <details>
+    <summary>Mes données sont-elles envoyées en ligne ?</summary>
+    <div>
+      <p>Non. Tes données restent sur ton iPhone, et dans ton propre iCloud quand la Synchro iCloud est activée ; nous ne pouvons pas les voir. Ce n'est que si tu actives toi-même Amis que ta carte ami, tes groupes d'étude, les messages que tu envoies, l'avatar photo et la photo de classe que tu ajoutes et les enregistrements des cadeaux Plus sont stockés dans la base de données publique d'iCloud d'Apple, où tes amis, les membres de tes groupes et nous pouvons les voir. Pour en savoir plus, consulte la <a href="privacy.html">Politique de confidentialité</a>.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Comment supprimer toutes mes données ?</summary>
+    <div>
+      <p>Supprimer l'app supprime ses données sur ton appareil. Les données dans iCloud peuvent être supprimées dans Réglages de l'iPhone › ton compte Apple › iCloud › Gérer le stockage du compte. C'est irréversible : pense à exporter une sauvegarde avant.</p>
+    </div>
+  </details>
+
+  <footer>
+    Mochi Pets · SEER INNOVATION TECHNOLOGY CO., LTD. · <a href="privacy.html">Politique de confidentialité</a> · <a href="terms.html">Conditions d'utilisation de la communauté</a><br>
+    <a href="../support.html">繁體中文</a> · <a href="../en/support.html">English</a> · <a href="../zh-hans/support.html">简体中文</a> · <a href="../ja/support.html">日本語</a> · <a href="../ko/support.html">한국어</a> · <a href="../es/support.html">Español</a> · <a href="../pt-br/support.html">Português</a> · <a href="../de/support.html">Deutsch</a>
+  </footer>
+</main>
+</body>
+</html>

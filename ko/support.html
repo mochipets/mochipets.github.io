@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>모찌펫 고객 지원</title>
+<meta name="description" content="모찌펫 고객 지원과 자주 묻는 질문이에요.">
+<style>
+  :root {
+    --bg: #FBF5EC;
+    --card: #FFFFFF;
+    --ink: #4A3A40;
+    --ink-2: #7D6B72;
+    --accent: #D9677F;
+    --accent-ink: #FFFFFF;
+    --line: #EFE3D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2A2230;
+      --card: #352B3C;
+      --ink: #F3E9EE;
+      --ink-2: #C3B2BC;
+      --accent: #F29BB0;
+      --accent-ink: #2A2230;
+      --line: #463A4E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", -apple-system, "Hiragino Maru Gothic ProN", "PingFang TC", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { margin-bottom: 24px; }
+  .app { color: var(--ink-2); font-size: 15px; margin: 0 0 4px; }
+  h1 { font-size: 28px; margin: 0 0 6px; line-height: 1.35; }
+  .lead { color: var(--ink-2); margin: 0; }
+  h2 { font-size: 19px; margin: 32px 0 10px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  .contact {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  details {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 0 18px;
+    margin: 0 0 10px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 0;
+    font-weight: 700;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "＋"; float: right; color: var(--ink-2); font-weight: 400; }
+  details[open] summary::after { content: "－"; }
+  details > div { padding: 0 0 14px; color: var(--ink-2); }
+  details > div p:last-child, details > div ul:last-child, details > div ol:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="app">모찌펫</p>
+    <h1>고객 지원 및 자주 묻는 질문</h1>
+    <p class="lead">궁금한 점, 아이디어, 버그 제보 모두 환영해요.</p>
+  </header>
+  <div class="contact">
+    <p>메일을 보내 주시면 보통 영업일 기준 3일 안에 답장해 드려요.</p>
+    <p>문제를 알려 주실 때는 iPhone 모델, iOS 버전, 앱 버전(앱의 ‘설정 › 정보’), 그리고 문제가 생기기까지의 과정을 함께 적어 주세요.</p>
+    <a class="button" href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">이메일로 문의하기</a>
+  </div>
+
+  <h2>집중</h2>
+  <details>
+    <summary>‘엄격 모드’가 뭔가요? 언제 집중이 실패하나요?</summary>
+    <div>
+      <ul>
+        <li>집중하는 동안 앱을 너무 오래 벗어나면 그 집중은 실패하고 보상을 받을 수 없어요. 기본 허용 시간은 25초이며, ‘집중 › 설정 › 뽀모도로 사이클과 규칙’에서 바꿀 수 있어요.</li>
+        <li>휴대폰을 잠그거나 전화를 받는 건 벗어난 것으로 치지 않아요.</li>
+        <li>매주 엄격 패스 2장을 받아요. 너무 오래 벗어나면 1장이 자동으로 사용되고 집중은 그대로 이어져요(‘엄격 패스 자동 사용’은 끌 수 있어요).</li>
+        <li>이 규칙이 필요 없다면 ‘집중’ 탭의 ‘설정’에서 ‘엄격 모드’를 끄면 돼요.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>사전이나 계산기를 써도 앱을 벗어난 걸로 치지 않았으면 해요</summary>
+    <div>
+      <p>대신 ‘집중 중 앱 차단’을 사용해 보세요. 내가 고른 방해되는 앱만 차단되고 다른 앱은 자유롭게 쓸 수 있으며, ‘엄격 모드’ 실패로 치지 않아요. ‘집중 › 설정 › 방해되는 앱 차단’에서 설정할 수 있고, 스크린 타임을 허용하려면 Face ID나 암호가 필요해요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>집중이 끝났는데 알림이 오지 않았어요</summary>
+    <div>
+      <p>iPhone의 설정 앱에서 ‘알림 › 모찌펫’으로 이동해 알림이 켜져 있는지 확인하고, 집중 모드나 방해 금지 모드 때문에 알림이 울리지 않는 건 아닌지도 확인해 주세요. 앱 안의 ‘설정 › 알림’에서는 알림 종류별로 켜고 끌 수 있어요.</p>
+    </div>
+  </details>
+
+  <h2>걸음 수와 부화</h2>
+  <details>
+    <summary>걸음 수가 업데이트되지 않고 티켓을 받을 수 없어요</summary>
+    <div>
+      <ol>
+        <li>건강 앱 › 오른쪽 위 프로필 사진 › 앱 › 모찌펫으로 이동해 ‘걸음’이 허용되어 있는지 확인해 주세요.</li>
+        <li>모찌펫으로 돌아와 ‘부화’ 탭을 열면 걸음 수가 자동으로 업데이트돼요.</li>
+        <li>2,000걸음마다 티켓 1장을 받으며, 하루 최대 5장까지 받을 수 있어요. 직접 입력한 걸음 수는 포함되지 않아요.</li>
+      </ol>
+    </div>
+  </details>
+
+  <h2>모찌펫 Plus와 결제</h2>
+  <details>
+    <summary>Plus를 구매했는데, 앱을 다시 설치하거나 휴대폰을 바꾼 뒤 사라졌어요</summary>
+    <div>
+      <p>앱에서 ‘설정 › 모찌펫 Plus’로 이동해 ‘구매 복원’을 탭하세요. 구매할 때 사용한 Apple 계정으로 로그인되어 있는지도 확인해 주세요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>무료 체험이 끝나면 자동으로 결제되나요? 어떻게 해지하나요?</summary>
+    <div>
+      <p>월간·연간 요금제에는 7일 무료 체험이 포함되어 있고, 체험이 끝나기 하루 전에 앱이 알려 드려요. 갱신을 원하지 않으면 iPhone의 설정 앱 › Apple 계정 › 구독에서 해지하세요. 체험 기간 중에 해지하면 요금이 청구되지 않아요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>구독을 해지하거나 환불받으려면 어떻게 하나요?</summary>
+    <div>
+      <ul>
+        <li>해지: iPhone ‘설정 › Apple 계정 › 구독’에서 하거나, 앱의 Plus 페이지에서 ‘구독 관리’를 탭하세요. 해지해도 기간이 끝날 때까지는 Plus를 계속 쓸 수 있어요.</li>
+        <li>환불은 Apple이 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>에서 처리해요.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Plus 없이도 즐길 수 있나요?</summary>
+    <div>
+      <p>네. 집중, 펫 돌보기, 부화, 시즌 이벤트, 시험 스퍼트 계획, 모험 이야기는 모두 무료예요. Plus는 꾸미기 요소와 상세 통계를 더해 줄 뿐, 펫을 더 강하게 만들거나 부화 확률을 바꾸지 않아요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>친구에게 Plus를 선물할 수 있나요?</summary>
+    <div>
+      <p>네. 친구의 페이지에서 ‘Plus 선물하기’를 탭하고 1개월 또는 1년을 고른 뒤, 원하면 한마디를 남겨 보세요. 친구는 ‘친구’ 페이지의 ‘신규’에서 선물을 확인할 수 있고, 선물은 친구가 연 순간부터 시작돼요. 이미 Plus를 쓰고 있는 친구는 나중을 위해 보관해 둘 수 있어요.</p>
+      <p>선물은 다른 것으로 바꿀 수 없어요. 환불은 구매한 사람만 Apple에 요청할 수 있으며, 환불되면 친구가 선물받은 Plus도 끝나요. 보낸 선물은 ‘설정’의 ‘모찌펫 Plus › 보낸 선물’에서 볼 수 있어요.</p>
+    </div>
+  </details>
+
+  <h2>친구와 스터디 그룹</h2>
+  <details>
+    <summary>친구는 어떻게 추가하나요?</summary>
+    <div>
+      <ol>
+        <li>‘펫’ 탭 오른쪽 위의 ☰ › ‘친구’를 탭하고, 닉네임을 정한 뒤 ‘시작’을 탭하세요. 친구 기능을 쓰려면 iCloud가 필요해요.</li>
+        <li>‘친구 코드 공유’를 탭해 내 코드를 보내거나, ‘친구 추가’를 탭해 친구의 코드를 입력하세요.</li>
+        <li>상대가 수락하면 친구가 돼요.</li>
+      </ol>
+      <p>스터디 그룹은 ☰ 메뉴에서 ‘스터디 그룹’을 탭한 다음(또는 ‘친구’ 페이지 위쪽에서 ‘스터디 그룹’으로 전환한 다음), ‘그룹 만들기’를 탭하거나 그룹 코드로 ‘그룹 참여’를 하면 돼요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>친구를 초대하면 무엇을 받나요?</summary>
+    <div>
+      <p>새로운 플레이어가 시작한 지 7일 안에 ‘친구 추가’에서 내 친구 코드를 입력하고 10분 이상 집중을 한 번 완료하면(중간에 끝내면 포함되지 않아요), 나는 코인 300개와 티켓 3장, 상대는 코인 200개와 티켓 1장을 받아요. 나는 최대 5번까지 받을 수 있어요.</p>
+      <p>초대는 iCloud 계정마다 한 번만 쓸 수 있고, 다시 설치해도 마찬가지예요. 보상은 앱이나 친구 페이지를 열 때 들어와요. 받지 못했다면 두 사람 모두 인터넷에 연결되어 있는지 확인하고 친구 페이지를 다시 열어 보세요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>메시지를 보내거나 교실에서 말하려면 어떻게 하나요?</summary>
+    <div>
+      <p>친구끼리는 서로의 페이지에서 ‘메시지’를, 스터디 그룹 멤버는 그룹 페이지에서 ‘채팅’을 탭하세요. 그룹의 ‘교실’에서 입력한 말은 15분 동안 내 펫 위에 표시되고, 그룹 채팅에도 올라가요.</p>
+      <p>메시지에는 텍스트와 이모지만 담을 수 있고 사진은 보낼 수 없어요. 메시지는 30일 동안 보관되며, 내가 보낸 메시지를 길게 누르면 보내기 취소할 수 있어요. 불쾌한 단어는 자동으로 별표로 바뀌어요. 특정 그룹의 알림을 받고 싶지 않다면 ‘그룹 설정’에서 ‘그룹 채팅 알림’을 끄세요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>친구는 내 정보를 어디까지 볼 수 있나요?</summary>
+    <div>
+      <p>닉네임, 아바타, 함께하는 펫의 모습, 지금 공부 중인지 여부, 오늘과 이번 주에 공부한 시간(분), 가방 속 간식 개수, 그리고 내가 보낸 메시지예요. 회고, 과목, 다른 사진은 볼 수 없어요. 모르는 사람을 검색하는 기능은 없으며, 친구 코드나 그룹 코드를 공유한 사람만 나를 찾을 수 있어요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>교실 사진은 어떻게 바꾸나요?</summary>
+    <div>
+      <p>그룹을 만든 사람이 Plus 회원이면 ‘그룹 설정 › 배경 사진’에서 ‘내 사진 사용’을 탭할 수 있고, 그러면 그룹 멤버 모두의 교실에 그 사진이 표시돼요. 나중에 다른 사진으로 바꾸거나 ‘사진 빼기’를 탭해 원래 테마로 되돌릴 수 있어요. ‘민감한 콘텐츠 경고’나 ‘커뮤니케이션 안전’이 켜져 있으면 사진은 추가하기 전에 iPhone에서 검사하며, 부적절해 보이는 사진은 추가할 수 없어요. 다른 사람이 나온 사진은 사용하지 말아 주세요.</p>
+      <p>그룹을 만든 사람이 올린 사진을 보고 싶지 않다면 ‘그룹 설정’에서 ‘배경 사진 표시’를 끄세요. 내 교실만 원래 테마로 돌아가요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>아바타는 어떻게 바꾸나요?</summary>
+    <div>
+      <p>기본 아바타는 함께하는 펫이에요. Plus 회원은 ‘친구’ 페이지에서 내 아바타를 탭하고 ‘내 사진 사용’을 탭한 뒤, 사진을 조정해서 추가할 수 있어요. 나중에 다른 사진으로 바꾸거나 ‘펫으로 되돌리기’를 탭해 사진을 삭제할 수 있어요. 그룹을 만든 사람이 Plus 회원이면 ‘그룹 설정 › 그룹 아바타’에서 사진을 추가할 수도 있어요. 친구와 내 그룹 멤버만 볼 수 있어요. ‘민감한 콘텐츠 경고’나 ‘커뮤니케이션 안전’이 켜져 있으면 사진은 추가하기 전에 iPhone에서 검사하며, 부적절해 보이는 사진은 추가할 수 없어요. 다른 사람의 사진이나 부적절한 내용은 사용하지 말아 주세요.</p>
+      <p>부적절한 아바타를 봤다면 친구나 멤버의 페이지를 열고, 왼쪽 위의 ‘더 보기’를 탭한 뒤 ‘아바타 신고’를 고르세요. 그룹 아바타는 ‘그룹 설정’에서 신고할 수 있어요. 신고하면 그 사진은 내 화면에 더 이상 나타나지 않아요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>누군가 때문에 불편해요. 어떻게 해야 하나요?</summary>
+    <div>
+      <p><strong>메시지 신고:</strong> 메시지를 길게 누르고 ‘신고’를 탭한 뒤 이유를 고르세요. ‘교실’에서는 상대의 펫을 길게 누르면 그 사람이 한 말을 신고할 수 있어요. <strong>사진 신고:</strong> ‘그룹 설정’에서 ‘이 사진 신고’를 탭하세요. 신고한 내용은 내 화면에서 바로 사라져요. 저희는 매일 신고 내용을 검토하고 24시간 안에 조치해요.</p>
+      <p><strong>차단:</strong> 상대의 메시지를 길게 누르고 ‘차단’을 탭하거나, 상대의 페이지에서 ‘더 보기 › 친구 삭제’를 탭한 다음 ‘삭제하고 차단’을 고르세요. 그 사람의 메시지는 물론 그 사람이 보내는 어떤 것도 보이지 않고, 상대는 더 이상 나에게 메시지를 보낼 수 없어요. 스터디 그룹에서는 특정 사람을 차단하거나 그룹에서 나갈 수 있고, 그룹을 만든 사람은 멤버를 내보낼 수 있어요.</p>
+      <p>닉네임이나 그룹 이름이 부적절하다면 상대의 닉네임과 친구 코드(또는 그룹 코드)를 적어 <a href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">메일로 알려 주세요</a>. 최대한 빨리 처리할게요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>친구 기능은 어떻게 끄나요?</summary>
+    <div>
+      <p>‘친구’ 페이지 오른쪽 위의 ‘친구 설정’ › ‘친구 기능 끄기’를 탭하세요. 내 친구 카드가 삭제되고, 모든 스터디 그룹에서 나가며(내가 만든 그룹은 해산돼요), 내가 보낸 메시지도 보내기 취소돼요. 친구 목록은 앱에 남아 있어서 다시 켜면 친구들이 그대로 있어요. 내가 보낸 Plus 선물 기록은 구매 증빙이라 삭제되지 않아요. 삭제를 원하면 <a href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">메일로 알려 주세요</a>.</p>
+    </div>
+  </details>
+
+  <h2>데이터와 새 휴대폰</h2>
+  <details>
+    <summary>새 휴대폰으로 펫을 옮기려면 어떻게 하나요?</summary>
+    <div>
+      <ol>
+        <li>기존 휴대폰에서 ‘설정 › 백업 › 백업 내보내기’로 이동해 파일을 파일 앱이나 iCloud Drive에 저장하세요.</li>
+        <li>새 휴대폰에 모찌펫을 설치하고 ‘설정 › 백업 › 백업에서 복원’에서 그 파일을 고르세요.</li>
+        <li>‘iCloud 동기화’가 켜져 있다면 같은 Apple 계정으로 로그인하기만 하면 데이터가 자동으로 돌아와요.</li>
+      </ol>
+    </div>
+  </details>
+  <details>
+    <summary>내 데이터가 업로드되나요?</summary>
+    <div>
+      <p>아니요. 데이터는 내 iPhone에 저장되고, ‘iCloud 동기화’가 켜져 있으면 내 iCloud에도 저장돼요. 저희는 볼 수 없어요. 직접 친구 기능을 켠 경우에만 친구 카드, 스터디 그룹, 내가 보낸 메시지, 내가 추가한 사진 아바타와 교실 사진, Plus 선물 기록이 Apple iCloud의 공개 데이터베이스에 저장되며, 친구와 그룹 멤버, 그리고 저희가 볼 수 있어요. 자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>을 확인해 주세요.</p>
+    </div>
+  </details>
+  <details>
+    <summary>내 데이터를 모두 삭제하려면 어떻게 하나요?</summary>
+    <div>
+      <p>앱을 삭제하면 기기에 있는 데이터가 삭제돼요. iCloud에 있는 데이터는 iPhone ‘설정 › Apple 계정 › iCloud › 계정 저장 공간 관리’에서 삭제할 수 있어요. 삭제하면 되돌릴 수 없으니 먼저 백업을 내보내 두는 걸 권해요.</p>
+    </div>
+  </details>
+
+  <footer>
+    모찌펫 · SEER INNOVATION TECHNOLOGY CO., LTD. · <a href="privacy.html">개인정보 처리방침</a> · <a href="terms.html">커뮤니티 이용 약관</a><br>
+    <a href="../support.html">繁體中文</a> · <a href="../en/support.html">English</a> · <a href="../zh-hans/support.html">简体中文</a> · <a href="../ja/support.html">日本語</a> · <a href="../es/support.html">Español</a> · <a href="../pt-br/support.html">Português</a> · <a href="../de/support.html">Deutsch</a> · <a href="../fr/support.html">Français</a>
+  </footer>
+</main>
+</body>
+</html>

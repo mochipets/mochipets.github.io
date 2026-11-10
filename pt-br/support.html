@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suporte do Mochi Pets</title>
+<meta name="description" content="Suporte e perguntas frequentes do Mochi Pets.">
+<style>
+  :root {
+    --bg: #FBF5EC;
+    --card: #FFFFFF;
+    --ink: #4A3A40;
+    --ink-2: #7D6B72;
+    --accent: #D9677F;
+    --accent-ink: #FFFFFF;
+    --line: #EFE3D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2A2230;
+      --card: #352B3C;
+      --ink: #F3E9EE;
+      --ink-2: #C3B2BC;
+      --accent: #F29BB0;
+      --accent-ink: #2A2230;
+      --line: #463A4E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Hiragino Maru Gothic ProN", "PingFang TC", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { margin-bottom: 24px; }
+  .app { color: var(--ink-2); font-size: 15px; margin: 0 0 4px; }
+  h1 { font-size: 28px; margin: 0 0 6px; line-height: 1.35; }
+  .lead { color: var(--ink-2); margin: 0; }
+  h2 { font-size: 19px; margin: 32px 0 10px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  .contact {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  details {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 0 18px;
+    margin: 0 0 10px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 0;
+    font-weight: 700;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "＋"; float: right; color: var(--ink-2); font-weight: 400; }
+  details[open] summary::after { content: "－"; }
+  details > div { padding: 0 0 14px; color: var(--ink-2); }
+  details > div p:last-child, details > div ul:last-child, details > div ol:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="app">Mochi Pets</p>
+    <h1>Suporte e perguntas frequentes</h1>
+    <p class="lead">Dúvidas, ideias ou encontrou um bug? Vamos adorar ouvir você.</p>
+  </header>
+  <div class="contact">
+    <p>Mande um e-mail para a gente. Normalmente respondemos em até 3 dias úteis.</p>
+    <p>Ao relatar um problema, inclua o modelo do seu iPhone, a versão do iOS, a versão do app (Ajustes › Sobre, no app) e os passos que levaram a ele.</p>
+    <a class="button" href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">Enviar e-mail ao suporte</a>
+  </div>
+
+  <h2>Foco</h2>
+  <details>
+    <summary>O que é o Modo rigoroso e quando uma sessão falha?</summary>
+    <div>
+      <ul>
+        <li>Se você sair do app por muito tempo durante uma sessão de foco, a sessão falha e não dá recompensas. O limite padrão é de 25 segundos; mude em Foco › Ajustes › Fluxo e regras do pomodoro.</li>
+        <li>Bloquear o celular ou atender uma ligação não conta como sair.</li>
+        <li>Você ganha 2 Passes Livres por semana. Se ficar fora por muito tempo, um deles é usado automaticamente e sua sessão continua (você pode desativar “Usar Passes Livres automaticamente”).</li>
+        <li>Não quer essa regra? Desative o Modo rigoroso em Ajustes, na aba Foco.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Quero usar um dicionário ou uma calculadora sem que isso conte como sair</summary>
+    <div>
+      <p>Use “Bloquear apps durante o foco”: só os apps que distraem que você escolher ficam bloqueados, os outros apps podem ser usados à vontade, e isso não conta como falha no Modo rigoroso. Configure em Foco › Ajustes › Bloquear apps que distraem; é preciso usar o Face ID ou o código para permitir o Tempo de Uso.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Não recebi uma notificação quando minha sessão de foco terminou</summary>
+    <div>
+      <p>No app Ajustes do iPhone, vá em Notificações › Mochi Pets e confira se as notificações estão ativadas. Verifique também se um Foco ou o Não Perturbe não está silenciando as notificações. No app, em Ajustes › Notificações, você pode ativar ou desativar cada tipo de lembrete.</p>
+    </div>
+  </details>
+
+  <h2>Passos e chocar ovos</h2>
+  <details>
+    <summary>Meus passos não atualizam e não consigo ganhar bilhetes</summary>
+    <div>
+      <ol>
+        <li>Abra o app Saúde › sua foto de perfil (no canto superior direito) › Apps › Mochi Pets e confira se Passos está permitido.</li>
+        <li>Volte ao Mochi Pets e abra a aba Chocar; seus passos são atualizados automaticamente.</li>
+        <li>Cada 2.000 passos valem 1 bilhete, até 5 por dia. Passos inseridos manualmente não contam.</li>
+      </ol>
+    </div>
+  </details>
+
+  <h2>Mochi Pets Plus e pagamentos</h2>
+  <details>
+    <summary>Comprei o Plus, mas ele sumiu depois de reinstalar o app ou trocar de celular</summary>
+    <div>
+      <p>No app, vá em Ajustes › Mochi Pets Plus e toque em “Restaurar compras”. Confira se você iniciou sessão com a mesma Conta Apple usada na compra.</p>
+    </div>
+  </details>
+  <details>
+    <summary>O teste grátis vai me cobrar automaticamente? Como cancelo?</summary>
+    <div>
+      <p>Os planos mensal e anual incluem 7 dias de teste grátis, e o app te avisa um dia antes de o teste terminar. Para que a assinatura não seja renovada, cancele no app Ajustes do iPhone › sua Conta Apple › Assinaturas. Se você cancelar durante o teste, não será cobrado.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Como cancelo uma assinatura ou peço reembolso?</summary>
+    <div>
+      <ul>
+        <li>Cancelar: Ajustes do iPhone › sua Conta Apple › Assinaturas, ou toque em “Gerenciar assinatura” na página do Plus no app. Você continua com o Plus até o fim do período.</li>
+        <li>Os reembolsos são feitos pela Apple em <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Dá para jogar sem o Plus?</summary>
+    <div>
+      <p>Sim. Focar, cuidar dos pets, chocar ovos, os eventos sazonais, a Reta final de provas e as histórias das Aventuras são todos gratuitos. O Plus adiciona visuais extras e estatísticas avançadas; ele nunca deixa os pets mais fortes nem muda as chances ao chocar.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Posso dar o Plus de presente para um amigo?</summary>
+    <div>
+      <p>Sim. Na página de um amigo, toque em “Presentear Plus”, escolha 1 mês ou 1 ano e, se quiser, escreva um recado. Seu amigo encontra o presente em “Novo”, na página Amigos, e o Plus começa a contar quando ele abrir o presente. Se ele já tiver o Plus, pode guardar o presente para depois.</p>
+      <p>Presentes não podem ser trocados por outra coisa. Só quem comprou pode pedir reembolso à Apple, e o reembolso encerra o Plus que seu amigo ganhou. Os presentes que você enviou ficam em Ajustes, em Mochi Pets Plus › Presentes enviados.</p>
+    </div>
+  </details>
+
+  <h2>Amigos e Grupos de estudo</h2>
+  <details>
+    <summary>Como adiciono um amigo?</summary>
+    <div>
+      <ol>
+        <li>Na aba Pet, toque em ☰ no canto superior direito › Amigos, escolha um apelido e toque em “Iniciar”. O recurso Amigos precisa do iCloud.</li>
+        <li>Toque em “Compartilhar código de amigo” para enviar o seu, ou toque em “Adicionar amigo” e digite o código do seu amigo.</li>
+        <li>Quando a pessoa aceitar, vocês passam a ser amigos.</li>
+      </ol>
+      <p>Para os Grupos de estudo, toque em “Grupos de estudo” no menu ☰ (ou mude para Grupos de estudo no topo da página Amigos) e depois em “Criar grupo”, ou em “Entrar no grupo” com um código do grupo.</p>
+    </div>
+  </details>
+  <details>
+    <summary>O que eu ganho ao convidar amigos?</summary>
+    <div>
+      <p>Nos primeiros 7 dias, um novo jogador insere seu código de amigo em Adicionar amigo e conclui uma sessão de foco de pelo menos 10 minutos (encerrar antes não conta). Você ganha 300 moedas e 3 bilhetes, e essa pessoa ganha 200 moedas e 1 bilhete. Você pode ganhar até 5 vezes.</p>
+      <p>Cada conta do iCloud só pode usar um convite uma vez, mesmo reinstalando o app. As recompensas chegam quando você abre o app ou a página Amigos. Se alguma não chegar, confira se os dois estão com internet e abra Amigos de novo.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Como mando mensagens ou falo na sala de aula?</summary>
+    <div>
+      <p>Amigos podem tocar em “Mensagem” na página um do outro, e os membros de um grupo de estudo podem tocar em “Chat” na página do grupo. Tudo o que você digita na Sala de aula de um grupo aparece acima do seu pet por 15 minutos e também aparece no chat do grupo.</p>
+      <p>As mensagens só podem ter texto e emoji, sem fotos. Elas ficam guardadas por 30 dias, e você pode tocar e manter pressionada uma mensagem sua para desfazer o envio. Palavras ofensivas são substituídas por asteriscos automaticamente. Para parar de receber notificações de um grupo, desative “Notificações do chat em grupo” nos Ajustes do grupo.</p>
+    </div>
+  </details>
+  <details>
+    <summary>O que meus amigos podem ver?</summary>
+    <div>
+      <p>Seu apelido, seu avatar, a aparência do pet que te acompanha, se você está estudando agora, seus minutos de hoje e desta semana, quantos petiscos há na sua mochila e as mensagens que você manda para eles. Eles não podem ver suas reflexões, matérias ou outras fotos. Não há como procurar desconhecidos; só as pessoas com quem você compartilha um código de amigo ou código do grupo conseguem te encontrar.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Como troco a foto da sala de aula?</summary>
+    <div>
+      <p>Se quem criou o grupo tiver o Plus, pode ir em Ajustes do grupo › Foto de fundo e tocar em “Usar sua própria foto”, e a sala de aula de todo mundo no grupo passa a mostrar essa foto. Depois dá para escolher outra ou tocar em “Remover foto” para voltar ao tema. Quando o Aviso de Conteúdo Sensível ou a Segurança na Comunicação está ativado, as fotos são verificadas no iPhone antes de serem adicionadas, e as que parecerem impróprias não podem ser adicionadas. Não use fotos de outras pessoas.</p>
+      <p>Não quer ver a foto de quem criou o grupo? Desative “Mostrar foto de fundo” nos Ajustes do grupo, e só a sua sala de aula volta ao tema.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Como troco meu avatar?</summary>
+    <div>
+      <p>Seu avatar é, por padrão, o pet que te acompanha. Se você tiver o Plus, toque no seu avatar na página Amigos, toque em “Usar sua própria foto”, ajuste e adicione a foto. Depois dá para escolher outra ou tocar em “Voltar para meu pet” para apagar a foto. Se quem criou um grupo tiver o Plus, também pode adicionar uma foto em Ajustes do grupo › Avatar do grupo. Só seus amigos e as pessoas do mesmo grupo podem ver essas fotos. Quando o Aviso de Conteúdo Sensível ou a Segurança na Comunicação está ativado, as fotos são verificadas no iPhone antes de serem adicionadas, e as que parecerem impróprias não podem ser adicionadas. Não use fotos de outras pessoas nem conteúdo impróprio.</p>
+      <p>Viu um avatar impróprio? Abra a página desse amigo ou membro, toque em “Mais” (no canto superior esquerdo) e escolha “Denunciar avatar”. O avatar de um grupo é denunciado nos Ajustes do grupo. Depois da denúncia, a foto deixa de aparecer na sua tela.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Alguém está me deixando desconfortável. O que posso fazer?</summary>
+    <div>
+      <p><strong>Denunciar uma mensagem:</strong> toque e mantenha pressionada a mensagem, toque em “Denunciar” e escolha um motivo. Na Sala de aula, toque e mantenha pressionado o pet de alguém para denunciar o que a pessoa disse. <strong>Denunciar uma foto:</strong> toque em “Denunciar esta foto” nos Ajustes do grupo. O conteúdo denunciado some da sua tela na hora. Analisamos as denúncias todos os dias e agimos em até 24 horas.</p>
+      <p><strong>Bloquear:</strong> mantenha a mensagem da pessoa pressionada e toque em Bloquear, ou na página da pessoa, toque em Mais › Remover amigo e depois em “Remover e bloquear”. Você não vai ver as mensagens nem nada mais que ela enviar, e ela não poderá mais te mandar mensagens. Em um grupo de estudo, você pode bloquear alguém ou sair do grupo, e quem criou o grupo pode remover pessoas.</p>
+      <p>Se um apelido ou nome de grupo for impróprio, <a href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">mande um e-mail para a gente</a> com o apelido e o código de amigo da pessoa (ou o código do grupo), e vamos resolver o quanto antes.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Como desativo o recurso Amigos?</summary>
+    <div>
+      <p>Na página Amigos, toque em Ajustes de amigos (no canto superior direito) › Desativar Amigos. Seu cartão de amigo é apagado, você sai de todos os grupos de estudo (os grupos que você criou são desfeitos) e o envio das mensagens que você mandou é desfeito. Sua lista de amigos fica no seu app, então seus amigos ainda estarão lá se você ativar de novo. Os registros dos presentes Plus que você enviou são comprovantes de compra e não são apagados; para apagá-los, <a href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">mande um e-mail para a gente</a>.</p>
+    </div>
+  </details>
+
+  <h2>Dados e celular novo</h2>
+  <details>
+    <summary>Como passo meus pets para um celular novo?</summary>
+    <div>
+      <ol>
+        <li>No celular antigo, vá em Ajustes › Backup › Exportar backup e salve o arquivo no app Arquivos ou no iCloud Drive.</li>
+        <li>Instale o Mochi Pets no celular novo e escolha o arquivo em Ajustes › Backup › Restaurar do backup.</li>
+        <li>Se a Sincronização do iCloud estiver ativada, basta iniciar sessão com a mesma Conta Apple, e seus dados voltam automaticamente.</li>
+      </ol>
+    </div>
+  </details>
+  <details>
+    <summary>Meus dados são enviados para algum lugar?</summary>
+    <div>
+      <p>Não. Seus dados ficam no seu iPhone e, quando a Sincronização do iCloud está ativada, no seu próprio iCloud; nós não conseguimos vê-los. Somente se você mesmo ativar o recurso Amigos, seu cartão de amigo, os grupos de estudo, as mensagens que você envia, o avatar com foto e a foto da sala de aula que você adiciona e os registros de presentes Plus ficam guardados no banco de dados público do iCloud da Apple, onde seus amigos, os membros do grupo e nós podemos vê-los. Veja a <a href="privacy.html">Política de Privacidade</a> para mais detalhes.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Como apago todos os meus dados?</summary>
+    <div>
+      <p>Apagar o app apaga os dados dele no seu dispositivo. Os dados no iCloud podem ser apagados em Ajustes do iPhone › sua Conta Apple › iCloud › Gerenciar Armazenamento da Conta. Isso não pode ser desfeito, então considere exportar um backup antes.</p>
+    </div>
+  </details>
+
+  <footer>
+    Mochi Pets · SEER INNOVATION TECHNOLOGY CO., LTD. · <a href="privacy.html">Política de Privacidade</a> · <a href="terms.html">Termos de Uso da Comunidade</a><br>
+    <a href="../support.html">繁體中文</a> · <a href="../en/support.html">English</a> · <a href="../zh-hans/support.html">简体中文</a> · <a href="../ja/support.html">日本語</a> · <a href="../ko/support.html">한국어</a> · <a href="../es/support.html">Español</a> · <a href="../de/support.html">Deutsch</a> · <a href="../fr/support.html">Français</a>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麻糬宠物客服</title>
+<meta name="description" content="麻糬宠物的客服与常见问题。">
+<style>
+  :root {
+    --bg: #FBF5EC;
+    --card: #FFFFFF;
+    --ink: #4A3A40;
+    --ink-2: #7D6B72;
+    --accent: #D9677F;
+    --accent-ink: #FFFFFF;
+    --line: #EFE3D6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2A2230;
+      --card: #352B3C;
+      --ink: #F3E9EE;
+      --ink-2: #C3B2BC;
+      --accent: #F29BB0;
+      --accent-ink: #2A2230;
+      --line: #463A4E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "PingFang SC", "Noto Sans SC", -apple-system, "Hiragino Maru Gothic ProN", "PingFang TC", "Noto Sans TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { margin-bottom: 24px; }
+  .app { color: var(--ink-2); font-size: 15px; margin: 0 0 4px; }
+  h1 { font-size: 28px; margin: 0 0 6px; line-height: 1.35; }
+  .lead { color: var(--ink-2); margin: 0; }
+  h2 { font-size: 19px; margin: 32px 0 10px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  .contact {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  details {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 0 18px;
+    margin: 0 0 10px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 0;
+    font-weight: 700;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "＋"; float: right; color: var(--ink-2); font-weight: 400; }
+  details[open] summary::after { content: "－"; }
+  details > div { padding: 0 0 14px; color: var(--ink-2); }
+  details > div p:last-child, details > div ul:last-child, details > div ol:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="app">麻糬宠物</p>
+    <h1>客服与常见问题</h1>
+    <p class="lead">有问题、建议，或者发现了 bug？都欢迎告诉我们。</p>
+  </header>
+  <div class="contact">
+    <p>给我们发邮件，我们通常会在 3 个工作日内回复。</p>
+    <p>反馈问题时，请附上你的 iPhone 型号、iOS 版本、App 版本（App 内的“设置 › 关于”）以及出现问题前的操作步骤。</p>
+    <a class="button" href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">发邮件给客服</a>
+  </div>
+
+  <h2>专注</h2>
+  <details>
+    <summary>严格模式是什么？什么情况下专注会失败？</summary>
+    <div>
+      <ul>
+        <li>专注时离开 App 太久，这次专注就会失败，也没有奖励。默认允许离开 25 秒，可以在“专注 › 设置 › 番茄流程与规则”中调整。</li>
+        <li>锁定屏幕或接打电话不算离开。</li>
+        <li>每周有 2 张免死金牌。离开太久时会自动用掉一张，这次专注照常继续（可以关闭“自动使用免死金牌”）。</li>
+        <li>不想要这个规则？可以在“专注”页的“设置”中关闭严格模式。</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>想查词典、用计算器，又不想被算作离开</summary>
+    <div>
+      <p>可以改用“专注时屏蔽 App”：只屏蔽你选的分心 App，其他 App 都可以自由使用，也不会算作严格模式失败。在“专注 › 设置 › 屏蔽分心的 App”中设置；需要用面容 ID 或密码允许“屏幕使用时间”权限。</p>
+    </div>
+  </details>
+  <details>
+    <summary>专注结束时没有收到通知</summary>
+    <div>
+      <p>在 iPhone 的“设置”App 中前往“通知 › 麻糬宠物”，确认通知已打开，并检查专注模式或勿扰模式没有把通知静音。在 App 内的“设置 › 通知”中，可以分别打开或关闭每一种提醒。</p>
+    </div>
+  </details>
+
+  <h2>步数与抽宠物</h2>
+  <details>
+    <summary>步数没有更新，换不到抽奖券</summary>
+    <div>
+      <ol>
+        <li>打开“健康”App › 右上角的头像 › “App” › “麻糬宠物”，确认已允许读取“步数”。</li>
+        <li>回到麻糬宠物，打开“抽宠物”页，步数会自动更新。</li>
+        <li>每走 2,000 步换 1 张抽奖券，每天最多 5 张。手动输入的步数不会计入。</li>
+      </ol>
+    </div>
+  </details>
+
+  <h2>麻糬宠物 Plus 与付款</h2>
+  <details>
+    <summary>买了 Plus，重新安装或换手机后不见了</summary>
+    <div>
+      <p>在 App 内前往“设置 › 麻糬宠物 Plus”，轻点“恢复购买”。请确认登录的是当初购买时使用的 Apple 账户。</p>
+    </div>
+  </details>
+  <details>
+    <summary>免费试用会自动扣费吗？怎么取消？</summary>
+    <div>
+      <p>月度和年度方案可以免费试用 7 天，试用结束前一天 App 会提醒你。如果不想续订，请在 iPhone 的“设置”App › 你的 Apple 账户 › “订阅”中取消。在试用期内取消就不会被收费。</p>
+    </div>
+  </details>
+  <details>
+    <summary>怎么取消订阅或申请退款？</summary>
+    <div>
+      <ul>
+        <li>取消：前往 iPhone 的“设置” › 你的 Apple 账户 › “订阅”，或在 App 内的 Plus 页面轻点“管理订阅”。取消后，在当前订阅期结束前仍可使用 Plus。</li>
+        <li>退款由 Apple 处理，请前往 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> 申请。</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>不买 Plus 也能玩吗？</summary>
+    <div>
+      <p>可以。专注、照顾宠物、抽宠物、季节活动、考试冲刺计划和冒险故事都是免费的。Plus 增加的是额外的外观和高级统计，不会让宠物变强，也不会改变抽宠物的概率。</p>
+    </div>
+  </details>
+  <details>
+    <summary>可以送 Plus 给好友吗？</summary>
+    <div>
+      <p>可以。在好友的页面轻点“送 Plus”，选择 1 个月或 1 年，也可以写一句话给对方。好友会在“好友”页面的“新消息”里看到礼物，从对方打开时开始计算。如果对方已经是 Plus 会员，可以先收着，以后再打开。</p>
+      <p>礼物不能兑换成其他东西。只有购买者可以向 Apple 申请退款，退款后好友获赠的 Plus 就会结束。你送出的礼物可以在“设置”里的“麻糬宠物 Plus › 送出的礼物”中找到。</p>
+    </div>
+  </details>
+
+  <h2>好友与学习小组</h2>
+  <details>
+    <summary>怎么加好友？</summary>
+    <div>
+      <ol>
+        <li>在“宠物”页轻点右上角的 ☰ › “好友”，取一个昵称后轻点“开始”。好友功能需要 iCloud。</li>
+        <li>轻点“分享好友码”把你的好友码发给对方，或轻点“加好友”输入对方的好友码。</li>
+        <li>对方接受后，你们就是好友了。</li>
+      </ol>
+      <p>学习小组：在 ☰ 菜单中轻点“学习小组”（或在“好友”页面顶部切换到“学习小组”），然后轻点“创建小组”，或用小组码“加入小组”。</p>
+    </div>
+  </details>
+  <details>
+    <summary>邀请好友有什么奖励？</summary>
+    <div>
+      <p>新玩家在开始玩的 7 天内，在“加好友”输入你的好友码，并完整完成一次 10 分钟以上的专注（提前结束不算）：你得 300 金币和 3 张抽奖券，对方得 200 金币和 1 张抽奖券。你最多可以领 5 次。</p>
+      <p>每个 iCloud 账号只能使用一次邀请，重新安装也一样。奖励会在打开 App 或好友页时发放；如果没收到，请确认双方都已联网，再打开好友页看看。</p>
+    </div>
+  </details>
+  <details>
+    <summary>怎么发消息、在教室里说话？</summary>
+    <div>
+      <p>好友之间可以在对方的页面轻点“发消息”；同一个学习小组的成员可以在小组页面轻点“聊天”。在小组的“教室”里输入的话，会显示在你的宠物头上 15 分钟，也会出现在群聊中。</p>
+      <p>消息只能包含文字和表情符号，不能发照片。消息保留 30 天，长按自己发的消息可以撤回。不雅的词语会被自动替换成星号。不想收到某个小组的通知，可以在“小组设置”中关闭“群聊通知”。</p>
+    </div>
+  </details>
+  <details>
+    <summary>好友能看到我的哪些信息？</summary>
+    <div>
+      <p>你的昵称、头像、陪伴宠物的样子、现在是否在学习、今天和本周学习了多少分钟、背包里的点心数量，以及你发给他们的消息。他们看不到你的心得、科目和其他照片。App 无法搜索陌生人，只有和你交换过好友码或小组码的人才能找到你。</p>
+    </div>
+  </details>
+  <details>
+    <summary>怎么更换教室的背景照片？</summary>
+    <div>
+      <p>如果小组的创建者是 Plus 会员，可以在“小组设置 › 背景照片”中轻点“用自己的照片”，小组里每个人的教室都会显示这张照片。之后可以换一张，或轻点“移除照片”回到原来的主题。手机打开“敏感内容警告”或“通信安全”时，照片在添加前会先在 iPhone 上检查，看起来不合适的照片无法添加。请不要使用他人的照片。</p>
+      <p>不想看到创建者放的照片？在“小组设置”中关闭“显示背景照片”，只有你自己的教室会换回主题。</p>
+    </div>
+  </details>
+  <details>
+    <summary>怎么更换头像？</summary>
+    <div>
+      <p>默认的头像是你的陪伴宠物。Plus 会员可以在“好友”页面轻点自己的头像，再轻点“用自己的照片”，调整好后添加；之后可以换一张，或轻点“换回宠物”删除照片。如果小组的创建者是 Plus 会员，也可以在“小组设置 › 小组头像”中添加照片。只有好友和同小组的人能看到。手机打开“敏感内容警告”或“通信安全”时，照片在添加前会先在 iPhone 上检查，看起来不合适的照片无法添加。请不要使用他人的照片或不合适的内容。</p>
+      <p>看到不合适的头像：打开好友或成员的页面，轻点左上角的“更多”，选择“举报头像”；小组头像可以在“小组设置”中举报。举报后，这张照片就不会再出现在你的屏幕上。</p>
+    </div>
+  </details>
+  <details>
+    <summary>有人让我感到不舒服，该怎么办？</summary>
+    <div>
+      <p><strong>举报消息：</strong>长按那条消息，轻点“举报”并选择原因。在“教室”里长按对方的宠物，可以举报对方说的话。<strong>举报照片：</strong>在“小组设置”中轻点“举报这张照片”。被举报的内容会立即从你的屏幕上消失。我们每天查看举报，并在 24 小时内处理。</p>
+      <p><strong>拉黑：</strong>长按对方的消息并轻点“拉黑”，或在对方的页面轻点“更多 › 移除好友”，再选择“移除并拉黑”。之后你不会再看到对方的消息和发来的其他内容，对方也无法再给你发消息。在学习小组里，你可以拉黑某个人或退出小组；小组的创建者可以把成员移出小组。</p>
+      <p>如果有人的昵称或小组名称不当，请<a href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">发邮件给我们</a>，附上对方的昵称和好友码（或小组码），我们会尽快处理。</p>
+    </div>
+  </details>
+  <details>
+    <summary>怎么关闭好友功能？</summary>
+    <div>
+      <p>在“好友”页面轻点右上角的“好友设置” › “关闭好友功能”。你的好友卡会被删除，你会退出所有学习小组（你创建的小组会一起解散），你发过的消息也会被撤回。好友列表会保留在你的 App 里，重新打开时好友都还在。你送出的 Plus 礼物记录是购买凭证，不会被删除；如需删除，请<a href="mailto:mochipets.care@gmail.com?subject=Mochi%20Pets%20Support">发邮件给我们</a>。</p>
+    </div>
+  </details>
+
+  <h2>数据与换手机</h2>
+  <details>
+    <summary>换手机时怎么把宠物带过去？</summary>
+    <div>
+      <ol>
+        <li>在旧手机上前往“设置 › 数据备份 › 导出备份文件”，把文件存到“文件”App 或 iCloud 云盘。</li>
+        <li>在新手机上安装麻糬宠物，然后在“设置 › 数据备份 › 从备份文件恢复”中选择这个文件。</li>
+        <li>如果打开了“iCloud 同步”，只要登录同一个 Apple 账户，数据就会自动恢复。</li>
+      </ol>
+    </div>
+  </details>
+  <details>
+    <summary>我的数据会被上传吗？</summary>
+    <div>
+      <p>不会。你的数据保存在你的 iPhone 上，打开 iCloud 同步时也会保存在你自己的 iCloud 中，我们看不到。只有在你自己打开好友功能后，你的好友卡、学习小组、你发的消息、你添加的照片头像、教室照片和 Plus 礼物记录才会存放在 Apple iCloud 的公共数据库中，你的好友、小组成员和我们可以看到。详情请参阅<a href="privacy.html">隐私政策</a>。</p>
+    </div>
+  </details>
+  <details>
+    <summary>怎么删除我的所有数据？</summary>
+    <div>
+      <p>删除 App 会同时删除它在你设备上的数据。iCloud 中的数据可以在 iPhone 的“设置” › 你的 Apple 账户 › “iCloud” › “管理账户储存空间”中删除。删除后无法恢复，建议先导出备份文件。</p>
+    </div>
+  </details>
+
+  <footer>
+    麻糬宠物 · SEER INNOVATION TECHNOLOGY CO., LTD. · <a href="privacy.html">隐私政策</a> · <a href="terms.html">社区使用条款</a><br>
+    <a href="../support.html">繁體中文</a> · <a href="../en/support.html">English</a> · <a href="../ja/support.html">日本語</a> · <a href="../ko/support.html">한국어</a> · <a href="../es/support.html">Español</a> · <a href="../pt-br/support.html">Português</a> · <a href="../de/support.html">Deutsch</a> · <a href="../fr/support.html">Français</a>
+  </footer>
+</main>
+</body>
+</html>
